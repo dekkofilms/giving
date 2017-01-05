@@ -21,19 +21,20 @@ class HomeVC: UIViewController {
         
         if user == nil {
             let sb = UIStoryboard(name: "Main", bundle: nil)
-            let signInVC = sb.instantiateViewController(withIdentifier: "SigninVC")
-            present(signInVC, animated: true, completion: nil)
+            let signinNavVC = sb.instantiateViewController(withIdentifier: "SigninNavVC")
+            present(signinNavVC, animated: true, completion: nil)
         }
         
     }
     
     @IBAction func signOutBtnTapped(_ sender: Any) {
         KeychainWrapper.standard.removeObject(forKey: KEY_UID)
+        KeychainWrapper.standard.removeObject(forKey: "id")
         
         let sb = UIStoryboard(name: "Main", bundle: nil)
-        let signInVC = sb.instantiateViewController(withIdentifier: "SigninVC")
+        let signinNavVC = sb.instantiateViewController(withIdentifier: "SigninNavVC")
         
-        present(signInVC, animated: false, completion: nil)
+        present(signinNavVC, animated: false, completion: nil)
     }
     
 

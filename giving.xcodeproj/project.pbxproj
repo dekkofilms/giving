@@ -15,6 +15,9 @@
 		3BE131021E1D66C600AA7177 /* SigninVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE131011E1D66C600AA7177 /* SigninVC.swift */; };
 		3BE131041E1D6B3C00AA7177 /* SignupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE131031E1D6B3C00AA7177 /* SignupVC.swift */; };
 		3BE131071E1DAA0D00AA7177 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE131061E1DAA0D00AA7177 /* Constants.swift */; };
+		3BE1310B1E1EACBC00AA7177 /* UserInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE1310A1E1EACBC00AA7177 /* UserInfoVC.swift */; };
+		3BE1310D1E1ED49F00AA7177 /* Link.html in Resources */ = {isa = PBXBuildFile; fileRef = 3BE1310C1E1ED49F00AA7177 /* Link.html */; };
+		3BE1310F1E1ED52100AA7177 /* AddBankVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE1310E1E1ED52100AA7177 /* AddBankVC.swift */; };
 		690FD469597D905202F8D76A /* Pods_giving.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B018209D342ABBB4B2E19567 /* Pods_giving.framework */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +32,9 @@
 		3BE131011E1D66C600AA7177 /* SigninVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SigninVC.swift; sourceTree = "<group>"; };
 		3BE131031E1D6B3C00AA7177 /* SignupVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupVC.swift; sourceTree = "<group>"; };
 		3BE131061E1DAA0D00AA7177 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		3BE1310A1E1EACBC00AA7177 /* UserInfoVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfoVC.swift; sourceTree = "<group>"; };
+		3BE1310C1E1ED49F00AA7177 /* Link.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = Link.html; path = giving/Link.html; sourceTree = "<group>"; };
+		3BE1310E1E1ED52100AA7177 /* AddBankVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddBankVC.swift; sourceTree = "<group>"; };
 		9A36045BBB55A0DC9A090752 /* Pods-giving.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-giving.release.xcconfig"; path = "Pods/Target Support Files/Pods-giving/Pods-giving.release.xcconfig"; sourceTree = "<group>"; };
 		B018209D342ABBB4B2E19567 /* Pods_giving.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_giving.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8D301EA194299301FFE735A /* Pods-giving.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-giving.debug.xcconfig"; path = "Pods/Target Support Files/Pods-giving/Pods-giving.debug.xcconfig"; sourceTree = "<group>"; };
@@ -49,6 +55,7 @@
 		3BE130E01E1D60FA00AA7177 = {
 			isa = PBXGroup;
 			children = (
+				3BE1310C1E1ED49F00AA7177 /* Link.html */,
 				3BE130EB1E1D60FA00AA7177 /* giving */,
 				3BE130EA1E1D60FA00AA7177 /* Products */,
 				E04598CF76D63825B5954F91 /* Pods */,
@@ -100,6 +107,8 @@
 				3BE130EE1E1D60FA00AA7177 /* HomeVC.swift */,
 				3BE131011E1D66C600AA7177 /* SigninVC.swift */,
 				3BE131031E1D6B3C00AA7177 /* SignupVC.swift */,
+				3BE1310A1E1EACBC00AA7177 /* UserInfoVC.swift */,
+				3BE1310E1E1ED52100AA7177 /* AddBankVC.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -192,6 +201,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3BE1310D1E1ED49F00AA7177 /* Link.html in Resources */,
 				3BE130F71E1D60FA00AA7177 /* LaunchScreen.storyboard in Resources */,
 				3BE130F41E1D60FA00AA7177 /* Assets.xcassets in Resources */,
 				3BE130F21E1D60FA00AA7177 /* Main.storyboard in Resources */,
@@ -253,11 +263,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3BE1310F1E1ED52100AA7177 /* AddBankVC.swift in Sources */,
 				3BE131071E1DAA0D00AA7177 /* Constants.swift in Sources */,
 				3BE131041E1D6B3C00AA7177 /* SignupVC.swift in Sources */,
 				3BE130EF1E1D60FA00AA7177 /* HomeVC.swift in Sources */,
 				3BE131021E1D66C600AA7177 /* SigninVC.swift in Sources */,
 				3BE130ED1E1D60FA00AA7177 /* AppDelegate.swift in Sources */,
+				3BE1310B1E1EACBC00AA7177 /* UserInfoVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

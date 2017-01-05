@@ -47,11 +47,12 @@ class SignupVC: UIViewController {
             if let result = response.result.value {
                 print("TAYLOR: SUCCESS = \(response.result.isSuccess)")
                 let JSON = result as! NSDictionary
-                print("TAYLOR: \(JSON["token"])")
+                print("TAYLOR: \(JSON["token"]) & \(JSON["id"])")
                 
-                if let token = JSON["token"] {
+                if let token = JSON["token"], let id = JSON["id"] {
                     KeychainWrapper.standard.set(token as! String, forKey: KEY_UID)
-                    self.presentingViewController!.presentingViewController!.dismiss(animated: true, completion: nil)
+                    KeychainWrapper.standard.set(id as! Int, forKey: "id")
+                    //self.presentingViewController!.presentingViewController!.dismiss(animated: true, completion: nil)
                 }
             }
         }

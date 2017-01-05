@@ -1,0 +1,34 @@
+<script src="https://cdn.plaid.com/link/v2/stable/link-initialize.js"></script>
+<script>
+var linkHandler = Plaid.create({
+  env: 'tartan',
+  clientName: 'Client Name',
+  key: 'test_key',
+  product: 'auth',
+  token: 'test,chase,connected',  // <- token to patch
+  onLoad: function() {
+    // The Link module finished loading.
+  },
+  onSuccess: function(public_token, metadata) {
+    // Send the public_token to your app server here.
+    // The metadata object contains info about the institution the
+    // user selected and the account ID, if selectAccount is enabled.
+  },
+  onExit: function(err, metadata) {
+    // The user exited the Link flow.
+    if (err != null) {
+      // The user encountered a Plaid API error prior to exiting.
+    }
+    // metadata contains information about the institution
+    // that the user selected and the most recent API request IDs.
+    // Storing this information can be helpful for support.
+  },
+});
+
+// Trigger the authentication view
+document.getElementById('linkButton').onclick = function() {
+  // Link will automatically detect the institution type associated with the
+  // public token and present the credential pane to your user.
+  linkHandler.open();
+};
+</script>

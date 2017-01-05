@@ -48,6 +48,7 @@ class SigninVC: UIViewController {
                 let JSON = result as! NSDictionary
                 
                 KeychainWrapper.standard.set(JSON["token"] as! String, forKey: KEY_UID)
+                KeychainWrapper.standard.set(JSON["id"] as! Int, forKey: "id")
                 self.dismiss(animated: true, completion: nil)
             }
             
@@ -57,9 +58,10 @@ class SigninVC: UIViewController {
     }
     
     @IBAction func createAnAccountTapped(_ sender: Any) {
-        let sb = UIStoryboard(name: "Main", bundle: nil)
-        let SignupVC = sb.instantiateViewController(withIdentifier: "SignupVC")
-        present(SignupVC, animated: true, completion: nil)
+//        let sb = UIStoryboard(name: "Main", bundle: nil)
+//        let SignupVC = sb.instantiateViewController(withIdentifier: "SignupVC")
+//        present(SignupVC, animated: true, completion: nil)
+        
     }
     
     
