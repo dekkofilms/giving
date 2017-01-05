@@ -16,6 +16,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        let defaults = UserDefaults.standard
+        if (defaults.object(forKey: "userHasLoggedInBefore") != nil) {
+            print("TAYLOR: User has logged in before")
+            
+            //Create the setup storyboard and make the entry point here
+            
+            
+        } else {
+            //This just goes to the main storyboard as always
+            print("TAYLOR: User has not logged in before")
+        }
+        
+        defaults.set(true, forKey: "userHasLoggedInBefore")
+        
         return true
     }
 

@@ -24,6 +24,7 @@ class HomeVC: UIViewController {
             let signInVC = sb.instantiateViewController(withIdentifier: "SigninVC")
             present(signInVC, animated: true, completion: nil)
         }
+        
     }
     
     @IBAction func signOutBtnTapped(_ sender: Any) {
