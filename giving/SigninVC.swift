@@ -26,8 +26,8 @@ class SigninVC: UIViewController {
     
     @IBAction func createAnAccountTapped(_ sender: Any) {
         let sb = UIStoryboard(name: "Main", bundle: nil)
-        let vc = sb.instantiateViewController(withIdentifier: "SignupVC")
-        present(vc, animated: true)
+        let SignupVC = sb.instantiateViewController(withIdentifier: "SignupVC")
+        present(SignupVC, animated: true, completion: nil)
     }
     
     

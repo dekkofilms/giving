@@ -13,7 +13,7 @@
         <!--SigninVC-->
         <scene sceneID="O3o-Mc-kb8">
             <objects>
-                <viewController id="CRd-kD-IfQ" customClass="SigninVC" customModule="giving" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SigninVC" id="CRd-kD-IfQ" customClass="SigninVC" customModule="giving" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ul5-k3-5Ax"/>
                         <viewControllerLayoutGuide type="bottom" id="5b4-YO-LYN"/>
@@ -125,6 +125,9 @@
                                     <constraint firstAttribute="height" constant="30" id="ovt-Lz-RcQ"/>
                                 </constraints>
                                 <state key="normal" title="Sign Up"/>
+                                <connections>
+                                    <action selector="signupBtnTapped:" destination="a9m-fJ-mWp" eventType="touchUpInside" id="SY0-sW-Arc"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -137,6 +140,10 @@
                             <constraint firstItem="7UT-zq-Yxx" firstAttribute="leading" secondItem="ZwV-C9-Kt2" secondAttribute="leadingMargin" constant="192" id="r0x-kC-sRf"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="passwordField" destination="beD-IH-JzY" id="4WZ-td-ZCo"/>
+                        <outlet property="usernameField" destination="6lC-zN-rPr" id="6eT-ox-aGW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Iau-tQ-E8Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
