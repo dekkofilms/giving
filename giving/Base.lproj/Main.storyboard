@@ -171,9 +171,22 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T4y-SM-oqq">
+                                <rect key="frame" x="16" y="28" width="79" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Ob9-7s-KDv"/>
+                                    <constraint firstAttribute="width" constant="79" id="xKq-MB-6ei"/>
+                                </constraints>
+                                <state key="normal" title="Sign Out"/>
+                                <connections>
+                                    <action selector="signOutBtnTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qD2-Pc-4Yh"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="T4y-SM-oqq" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="Qcf-Gd-fL0"/>
+                            <constraint firstItem="T4y-SM-oqq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="mt5-Yh-Ixb"/>
                             <constraint firstItem="mfi-f7-08S" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nUz-HP-ti3"/>
                             <constraint firstItem="mfi-f7-08S" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="uki-iD-q58"/>
                         </constraints>
@@ -181,7 +194,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="986" y="134"/>
+            <point key="canvasLocation" x="984.79999999999995" y="133.5832083958021"/>
         </scene>
     </scenes>
 </document>

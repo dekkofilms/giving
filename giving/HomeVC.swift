@@ -25,6 +25,16 @@ class HomeVC: UIViewController {
             present(signInVC, animated: true, completion: nil)
         }
     }
+    
+    @IBAction func signOutBtnTapped(_ sender: Any) {
+        KeychainWrapper.standard.removeObject(forKey: KEY_UID)
+        
+        let sb = UIStoryboard(name: "Main", bundle: nil)
+        let signInVC = sb.instantiateViewController(withIdentifier: "SigninVC")
+        
+        present(signInVC, animated: false, completion: nil)
+    }
+    
 
 
 }

@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Alamofire
+import SwiftKeychainWrapper
 
 class SigninVC: UIViewController {
 
@@ -22,6 +24,35 @@ class SigninVC: UIViewController {
     }
 
     @IBAction func signinBtnTapped(_ sender: Any) {
+        
+        guard let username = usernameField.text else {
+            print("TAYLOR: No username")
+            return
+        }
+        
+        guard let password = passwordField.text else {
+            print("TAYLOR: No password")
+            return
+        }
+        
+        let parameters: Parameters = ["username": username, "password": password]
+        
+        
+        Alamofire.request("http://localhost:3000/auth/login", method: .post, parameters: parameters).responseJSON { (response) in
+            if response.result.isFailure == true {
+                print("TAYLOR: Wrong info given")
+                return
+            }
+            
+            if let result = response.result.value {
+                let JSON = result as! NSDictionary
+                
+                KeychainWrapper.standard.set(JSON["token"] as! String, forKey: KEY_UID)
+                self.dismiss(animated: true, completion: nil)
+            }
+            
+            
+        }
     }
     
     @IBAction func createAnAccountTapped(_ sender: Any) {
