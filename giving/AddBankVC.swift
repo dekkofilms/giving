@@ -8,6 +8,8 @@
 
 import UIKit
 import WebKit
+import Alamofire
+import SwiftKeychainWrapper
 
 class AddBankVC: UIViewController, WKNavigationDelegate {
     
@@ -43,7 +45,7 @@ class AddBankVC: UIViewController, WKNavigationDelegate {
     // generateLinkInitializationURL :: create the link.html url with query parameters
     func generateLinkInitializationURL() -> String {
         let config = [
-            "key": "test_key",
+            "key": "a9c79284129436ffeecf91b23101f7",
             "product": "connect",
             "longtail": "true",
             "selectAccount": "true",
@@ -86,6 +88,35 @@ class AddBankVC: UIViewController, WKNavigationDelegate {
                 print("Account ID: \(queryParams["account_id"])");
                 print("Institution type: \(queryParams["institution_type"])");
                 print("Institution name: \(queryParams["institution_name"])");
+                
+                //Sending this to the server
+                if let token = queryParams["public_token"], let account_id = queryParams["account_id"] {
+                    let parameters = ["public_token" : token, "account_id" : account_id]
+                    
+                    Alamofire.request("http://localhost:3000/plaid/authenticate", method: .post, parameters: parameters).responseJSON(completionHandler: { (response) in
+                        
+                        if response.result.isFailure == true {
+                            print("TAYLOR: FAILURE = \(response.result.isFailure)")
+                            return
+                        }
+                        
+                        if let result = response.result.value {
+                            print("TAYLOR: SUCCESS = \(response.result.isSuccess)")
+                            let JSON = result as! NSDictionary
+                            print("TAYLOR: \(JSON)")
+                            
+                            if let token = JSON["access_token"], let bank_account_token = JSON["bank_account_token"] {
+                                KeychainWrapper.standard.set(token as! String, forKey: "access_token")
+                                KeychainWrapper.standard.set(bank_account_token as! String, forKey: "bank_account_token")
+                            }
+                        }
+                        
+                        
+                    })
+                    
+                }
+                
+                
                 break
                 
             case "exit"?:
@@ -115,7 +146,6 @@ class AddBankVC: UIViewController, WKNavigationDelegate {
             // Handle http:// and https:// links inside of Plaid Link,
             // and open them in a new Safari page. This is necessary for links
             // such as "forgot-password" and "locked-account"
-
             UIApplication.shared.openURL(navigationAction.request.url!)
             decisionHandler(.cancel)
         } else {
