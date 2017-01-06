@@ -101,7 +101,6 @@ class AddBankVC: UIViewController, WKNavigationDelegate {
                         }
                         
                         if let result = response.result.value {
-                            print("TAYLOR: SUCCESS = \(response.result.isSuccess)")
                             let JSON = result as! NSDictionary
                             print("TAYLOR: \(JSON)")
                             
