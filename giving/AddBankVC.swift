@@ -50,8 +50,8 @@ class AddBankVC: UIViewController, WKNavigationDelegate {
             "longtail": "true",
             "selectAccount": "true",
             "env": "tartan",
-            "clientName": "Test App",
-            "webhook": "https://requestb.in",
+            "clientName": "Giving",
+//            "webhook": "https://requestb.in",
             "isMobile": "true",
             "isWebview": "true"
         ]
@@ -88,10 +88,11 @@ class AddBankVC: UIViewController, WKNavigationDelegate {
                 print("Account ID: \(queryParams["account_id"])");
                 print("Institution type: \(queryParams["institution_type"])");
                 print("Institution name: \(queryParams["institution_name"])");
+                print("TAYLORRRRRRRR: \(queryParams)")
                 
                 //Sending this to the server
-                if let token = queryParams["public_token"], let account_id = queryParams["account_id"] {
-                    let parameters = ["public_token" : token, "account_id" : account_id]
+                if let token = queryParams["public_token"], let account_id = queryParams["account_id"], let institution_type = queryParams["institution_type"] {
+                    let parameters = ["public_token" : token, "account_id" : account_id, "institution_type" : institution_type]
                     
                     Alamofire.request("http://localhost:3000/plaid/authenticate", method: .post, parameters: parameters).responseJSON(completionHandler: { (response) in
                         
@@ -102,9 +103,9 @@ class AddBankVC: UIViewController, WKNavigationDelegate {
                         
                         if let result = response.result.value {
                             let JSON = result as! NSDictionary
-                            print("TAYLOR: \(JSON)")
                             
                             if let token = JSON["access_token"], let bank_account_token = JSON["bank_account_token"] {
+                                print("TAYLOR___SETTING KEYCHAIN: \(token) & \(bank_account_token)")
                                 KeychainWrapper.standard.set(token as! String, forKey: "access_token")
                                 KeychainWrapper.standard.set(bank_account_token as! String, forKey: "bank_account_token")
                             }

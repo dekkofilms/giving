@@ -8,6 +8,7 @@
 
 import UIKit
 import SwiftKeychainWrapper
+import Alamofire
 
 class HomeVC: UIViewController {
 
@@ -25,6 +26,12 @@ class HomeVC: UIViewController {
             present(signinNavVC, animated: true, completion: nil)
         }
         
+        let token = KeychainWrapper.standard.string(forKey: "access_token")
+        
+        if token != nil {
+            getUserTransactions()
+        }
+        
     }
     
     @IBAction func signOutBtnTapped(_ sender: Any) {
@@ -35,6 +42,18 @@ class HomeVC: UIViewController {
         let signinNavVC = sb.instantiateViewController(withIdentifier: "SigninNavVC")
         
         present(signinNavVC, animated: false, completion: nil)
+    }
+    
+    func getUserTransactions() {
+        if let token = KeychainWrapper.standard.string(forKey: "access_token") {
+            let parameters: Parameters = ["token" : token]
+            print("TAYLOR --- PARAMS: \(parameters)")
+            
+            Alamofire.request("http://localhost:3000/plaid/transactions", method: .post, parameters: parameters).responseJSON { (response) in
+                print("TAYLOR---Account INFO: \(response.result.value)")
+            }
+        }
+        
     }
     
 
