@@ -17,6 +17,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
+        let navigationBarAppearance = UINavigationBar.appearance()
+        
+        //making it clear background
+        navigationBarAppearance.isTranslucent = false
+        //taking off shadow
+        navigationBarAppearance.shadowImage = UIImage()
+        navigationBarAppearance.setBackgroundImage(UIImage(), for: .default)
+        
+        //text color is black
+        navigationBarAppearance.tintColor = UIColor(red: 0/255, green: 0/255, blue: 0/255, alpha: 1.0)
+        //background color is white
+        navigationBarAppearance.barTintColor = UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1.0)
+        
         let defaults = UserDefaults.standard
         if (defaults.object(forKey: "userHasLoggedInBefore") != nil) {
             print("TAYLOR: User has logged in before")

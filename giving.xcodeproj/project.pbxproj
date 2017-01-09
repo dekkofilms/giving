@@ -18,6 +18,7 @@
 		3BE1310B1E1EACBC00AA7177 /* UserInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE1310A1E1EACBC00AA7177 /* UserInfoVC.swift */; };
 		3BE1310D1E1ED49F00AA7177 /* Link.html in Resources */ = {isa = PBXBuildFile; fileRef = 3BE1310C1E1ED49F00AA7177 /* Link.html */; };
 		3BE1310F1E1ED52100AA7177 /* AddBankVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE1310E1E1ED52100AA7177 /* AddBankVC.swift */; };
+		3BE131171E23132500AA7177 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BE131161E23132500AA7177 /* SWRevealViewController.m */; };
 		690FD469597D905202F8D76A /* Pods_giving.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B018209D342ABBB4B2E19567 /* Pods_giving.framework */; };
 /* End PBXBuildFile section */
 
@@ -36,6 +37,9 @@
 		3BE1310C1E1ED49F00AA7177 /* Link.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = Link.html; path = giving/Link.html; sourceTree = "<group>"; };
 		3BE1310E1E1ED52100AA7177 /* AddBankVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddBankVC.swift; sourceTree = "<group>"; };
 		3BE131101E1FF75F00AA7177 /* giving.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = giving.entitlements; sourceTree = "<group>"; };
+		3BE131141E23132400AA7177 /* giving-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "giving-Bridging-Header.h"; sourceTree = "<group>"; };
+		3BE131151E23132500AA7177 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		3BE131161E23132500AA7177 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		9A36045BBB55A0DC9A090752 /* Pods-giving.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-giving.release.xcconfig"; path = "Pods/Target Support Files/Pods-giving/Pods-giving.release.xcconfig"; sourceTree = "<group>"; };
 		B018209D342ABBB4B2E19567 /* Pods_giving.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_giving.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8D301EA194299301FFE735A /* Pods-giving.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-giving.debug.xcconfig"; path = "Pods/Target Support Files/Pods-giving/Pods-giving.debug.xcconfig"; sourceTree = "<group>"; };
@@ -75,6 +79,7 @@
 		3BE130EB1E1D60FA00AA7177 /* giving */ = {
 			isa = PBXGroup;
 			children = (
+				3BE131131E23130700AA7177 /* SWRevealViewController */,
 				3BE131101E1FF75F00AA7177 /* giving.entitlements */,
 				3BE131051E1DA9FD00AA7177 /* Util */,
 				3BE131001E1D625700AA7177 /* Controllers */,
@@ -121,6 +126,16 @@
 				3BE131061E1DAA0D00AA7177 /* Constants.swift */,
 			);
 			name = Util;
+			sourceTree = "<group>";
+		};
+		3BE131131E23130700AA7177 /* SWRevealViewController */ = {
+			isa = PBXGroup;
+			children = (
+				3BE131151E23132500AA7177 /* SWRevealViewController.h */,
+				3BE131161E23132500AA7177 /* SWRevealViewController.m */,
+				3BE131141E23132400AA7177 /* giving-Bridging-Header.h */,
+			);
+			name = SWRevealViewController;
 			sourceTree = "<group>";
 		};
 		C2F80ED07AA93148FDF7D818 /* Frameworks */ = {
@@ -176,6 +191,7 @@
 					3BE130E81E1D60FA00AA7177 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = 2TNDFYS6JC;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Keychain = {
@@ -273,6 +289,7 @@
 				3BE1310F1E1ED52100AA7177 /* AddBankVC.swift in Sources */,
 				3BE131071E1DAA0D00AA7177 /* Constants.swift in Sources */,
 				3BE131041E1D6B3C00AA7177 /* SignupVC.swift in Sources */,
+				3BE131171E23132500AA7177 /* SWRevealViewController.m in Sources */,
 				3BE130EF1E1D60FA00AA7177 /* HomeVC.swift in Sources */,
 				3BE131021E1D66C600AA7177 /* SigninVC.swift in Sources */,
 				3BE130ED1E1D60FA00AA7177 /* AppDelegate.swift in Sources */,
@@ -400,12 +417,15 @@
 			baseConfigurationReference = C8D301EA194299301FFE735A /* Pods-giving.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = giving/giving.entitlements;
 				DEVELOPMENT_TEAM = 2TNDFYS6JC;
 				INFOPLIST_FILE = giving/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = dekko.giving;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "giving/giving-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -415,12 +435,14 @@
 			baseConfigurationReference = 9A36045BBB55A0DC9A090752 /* Pods-giving.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = giving/giving.entitlements;
 				DEVELOPMENT_TEAM = 2TNDFYS6JC;
 				INFOPLIST_FILE = giving/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = dekko.giving;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "giving/giving-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

@@ -12,12 +12,21 @@ import Alamofire
 
 class HomeVC: UIViewController {
 
+    @IBOutlet weak var menuButton: UIBarButtonItem!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if self.revealViewController() != nil {
+            menuButton.target = self.revealViewController()
+            menuButton.action = #selector(SWRevealViewController.revealToggle(_:))
+            self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+        }
         // Do any additional setup after loading the view, typically from a nib.
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        
         let user = KeychainWrapper.standard.string(forKey: KEY_UID)
         
         if user == nil {
@@ -55,7 +64,6 @@ class HomeVC: UIViewController {
         }
         
     }
-    
 
 
 }
