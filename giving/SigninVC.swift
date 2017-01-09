@@ -38,7 +38,7 @@ class SigninVC: UIViewController {
         let parameters: Parameters = ["username": username, "password": password]
         
         
-        Alamofire.request("http://localhost:3000/auth/login", method: .post, parameters: parameters).responseJSON { (response) in
+        Alamofire.request("https://shielded-taiga-67588.herokuapp.com/auth/login", method: .post, parameters: parameters).responseJSON { (response) in
             if response.result.isFailure == true {
                 print("TAYLOR: Wrong info given")
                 return

@@ -37,7 +37,7 @@ class SignupVC: UIViewController {
         
         
         let parameters: Parameters = ["username": username, "password": password]
-        Alamofire.request("http://localhost:3000/auth/signup", method: .post, parameters: parameters).responseJSON { (response) in
+        Alamofire.request("https://shielded-taiga-67588.herokuapp.com/auth/signup", method: .post, parameters: parameters).responseJSON { (response) in
             
             if response.result.isFailure == true {
                 print("TAYLOR: FAILURE = \(response.result.isFailure)")

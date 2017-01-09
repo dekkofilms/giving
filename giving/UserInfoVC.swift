@@ -27,7 +27,7 @@ class UserInfoVC: UIViewController {
             
             let parameters: Parameters = ["firstName" : firstName, "lastName" : lastName, "id" : id]
             
-            Alamofire.request("http://localhost:3000/user/profile", method: .post, parameters: parameters).responseJSON(completionHandler: { (response) in
+            Alamofire.request("https://shielded-taiga-67588.herokuapp.com/user/profile", method: .post, parameters: parameters).responseJSON(completionHandler: { (response) in
                 print("TAYLOR: \(response.result.value)")
             })
             

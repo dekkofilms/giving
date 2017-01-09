@@ -58,7 +58,7 @@ class HomeVC: UIViewController {
             let parameters: Parameters = ["token" : token]
             print("TAYLOR --- PARAMS: \(parameters)")
             
-            Alamofire.request("http://localhost:3000/plaid/transactions", method: .post, parameters: parameters).responseJSON { (response) in
+            Alamofire.request("https://shielded-taiga-67588.herokuapp.com/plaid/transactions", method: .post, parameters: parameters).responseJSON { (response) in
                 print("TAYLOR---Account INFO: \(response.result.value)")
             }
         }

@@ -94,7 +94,7 @@ class AddBankVC: UIViewController, WKNavigationDelegate {
                 if let token = queryParams["public_token"], let account_id = queryParams["account_id"], let institution_type = queryParams["institution_type"] {
                     let parameters = ["public_token" : token, "account_id" : account_id, "institution_type" : institution_type]
                     
-                    Alamofire.request("http://localhost:3000/plaid/authenticate", method: .post, parameters: parameters).responseJSON(completionHandler: { (response) in
+                    Alamofire.request("https://shielded-taiga-67588.herokuapp.com/plaid/authenticate", method: .post, parameters: parameters).responseJSON(completionHandler: { (response) in
                         
                         if response.result.isFailure == true {
                             print("TAYLOR: FAILURE = \(response.result.isFailure)")
@@ -108,6 +108,9 @@ class AddBankVC: UIViewController, WKNavigationDelegate {
                                 print("TAYLOR___SETTING KEYCHAIN: \(token) & \(bank_account_token)")
                                 KeychainWrapper.standard.set(token as! String, forKey: "access_token")
                                 KeychainWrapper.standard.set(bank_account_token as! String, forKey: "bank_account_token")
+                                
+                                //dismiss or present next view ... this resulted in not being dismissed at all, and being on blank screen
+                                //self.dismiss(animated: true, completion: nil)
                             }
                         }
                         
