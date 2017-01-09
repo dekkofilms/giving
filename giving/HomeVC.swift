@@ -42,8 +42,8 @@ class HomeVC: UIViewController {
         }
         
     }
-    
-    @IBAction func signOutBtnTapped(_ sender: Any) {
+
+    @IBAction func signOutButtonTapped(_ sender: Any) {
         KeychainWrapper.standard.removeObject(forKey: KEY_UID)
         KeychainWrapper.standard.removeObject(forKey: "id")
         
