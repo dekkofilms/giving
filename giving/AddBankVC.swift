@@ -80,7 +80,7 @@ class AddBankVC: UIViewController, WKNavigationDelegate {
                 
             case "connected"?:
                 // Close the webview
-                self.dismiss(animated: true, completion: nil)
+                //self.dismiss(animated: true, completion: nil)
                 
                 // Parse data passed from Link into a dictionary
                 // This includes the public_token as well as account and institution metadata
@@ -88,7 +88,7 @@ class AddBankVC: UIViewController, WKNavigationDelegate {
                 print("Account ID: \(queryParams["account_id"])");
                 print("Institution type: \(queryParams["institution_type"])");
                 print("Institution name: \(queryParams["institution_name"])");
-                print("TAYLORRRRRRRR: \(queryParams)")
+                print("TAYLOR - OnExit Return: \(queryParams)")
                 
                 //Sending this to the server
                 if let token = queryParams["public_token"], let account_id = queryParams["account_id"], let institution_type = queryParams["institution_type"] {
@@ -110,7 +110,7 @@ class AddBankVC: UIViewController, WKNavigationDelegate {
                                 KeychainWrapper.standard.set(bank_account_token as! String, forKey: "bank_account_token")
                                 
                                 //dismiss or present next view ... this resulted in not being dismissed at all, and being on blank screen
-                                //self.dismiss(animated: true, completion: nil)
+                                self.dismiss(animated: true, completion: nil)
                             }
                         }
                         
@@ -152,7 +152,7 @@ class AddBankVC: UIViewController, WKNavigationDelegate {
             UIApplication.shared.openURL(navigationAction.request.url!)
             decisionHandler(.cancel)
         } else {
-            print("Unrecognized URL scheme detected that is neither HTTP, HTTPS, or related to Plaid Link: \(navigationAction.request.url?.absoluteString)");
+            print("Unrecognized URL scheme detected that is neither HTTP, HTTPS, or related to Plaid Link: \(navigationAction.request.url!.absoluteString)");
             decisionHandler(.allow)
         }
     }
