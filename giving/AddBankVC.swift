@@ -46,7 +46,7 @@ class AddBankVC: UIViewController, WKNavigationDelegate {
     func generateLinkInitializationURL() -> String {
         let config = [
             "key": "a9c79284129436ffeecf91b23101f7",
-            "product": "connect",
+            "product": "auth",
             "longtail": "true",
             "selectAccount": "true",
             "env": "tartan",
