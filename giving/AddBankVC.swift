@@ -51,7 +51,6 @@ class AddBankVC: UIViewController, WKNavigationDelegate {
             "selectAccount": "true",
             "env": "tartan",
             "clientName": "Giving",
-//            "webhook": "https://requestb.in",
             "isMobile": "true",
             "isWebview": "true"
         ]
@@ -91,8 +90,10 @@ class AddBankVC: UIViewController, WKNavigationDelegate {
                 print("TAYLOR - OnExit Return: \(queryParams)")
                 
                 //Sending this to the server
-                if let token = queryParams["public_token"], let account_id = queryParams["account_id"], let institution_type = queryParams["institution_type"] {
-                    let parameters = ["public_token" : token, "account_id" : account_id, "institution_type" : institution_type]
+                if let token = queryParams["public_token"], let account_id = queryParams["account_id"], let id = KeychainWrapper.standard.integer(forKey: "id") {
+                    let parameters = ["public_token" : token, "account_id" : account_id, "user_id" : id] as [String : Any]
+                    
+                    print("TAYLOR --- user_ID at Addbank: \(parameters)")
                     
                     Alamofire.request("https://shielded-taiga-67588.herokuapp.com/plaid/authenticate", method: .post, parameters: parameters).responseJSON(completionHandler: { (response) in
                         

@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B5021931E26C29C004DD699 /* ContributionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5021921E26C29C004DD699 /* ContributionCell.swift */; };
+		3B5021951E26C329004DD699 /* Contribution.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5021941E26C329004DD699 /* Contribution.swift */; };
+		3B51DEC61E26B4C40086D648 /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B51DEC51E26B4C40086D648 /* ShadowView.swift */; };
+		3BCE3AC11E26CFB500A2EE19 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BCE3AC01E26CFB500A2EE19 /* SwiftyJSON.framework */; };
 		3BE130ED1E1D60FA00AA7177 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE130EC1E1D60FA00AA7177 /* AppDelegate.swift */; };
 		3BE130EF1E1D60FA00AA7177 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE130EE1E1D60FA00AA7177 /* HomeVC.swift */; };
 		3BE130F21E1D60FA00AA7177 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BE130F01E1D60FA00AA7177 /* Main.storyboard */; };
@@ -44,6 +48,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3B5021921E26C29C004DD699 /* ContributionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContributionCell.swift; sourceTree = "<group>"; };
+		3B5021941E26C329004DD699 /* Contribution.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contribution.swift; sourceTree = "<group>"; };
+		3B51DEC51E26B4C40086D648 /* ShadowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShadowView.swift; sourceTree = "<group>"; };
+		3BCE3AC01E26CFB500A2EE19 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = "../../../../Library/Developer/Xcode/DerivedData/giving-ehoqkzamlexqbzdeeqrkylqjqrey/Build/Products/Debug-iphonesimulator/SwiftyJSON/SwiftyJSON.framework"; sourceTree = "<group>"; };
 		3BE130E91E1D60FA00AA7177 /* giving.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = giving.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BE130EC1E1D60FA00AA7177 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3BE130EE1E1D60FA00AA7177 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
@@ -92,6 +100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3BCE3AC11E26CFB500A2EE19 /* SwiftyJSON.framework in Frameworks */,
 				690FD469597D905202F8D76A /* Pods_giving.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -140,6 +149,7 @@
 		3BE130FE1E1D624600AA7177 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				3B5021941E26C329004DD699 /* Contribution.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -147,6 +157,8 @@
 		3BE130FF1E1D624D00AA7177 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				3B51DEC51E26B4C40086D648 /* ShadowView.swift */,
+				3B5021921E26C29C004DD699 /* ContributionCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -212,6 +224,7 @@
 		C2F80ED07AA93148FDF7D818 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3BCE3AC01E26CFB500A2EE19 /* SwiftyJSON.framework */,
 				B018209D342ABBB4B2E19567 /* Pods_giving.framework */,
 			);
 			name = Frameworks;
@@ -375,11 +388,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B51DEC61E26B4C40086D648 /* ShadowView.swift in Sources */,
 				3BE1311D1E242D9F00AA7177 /* SettingsVC.swift in Sources */,
 				3BE1310F1E1ED52100AA7177 /* AddBankVC.swift in Sources */,
+				3B5021951E26C329004DD699 /* Contribution.swift in Sources */,
 				3BE131071E1DAA0D00AA7177 /* Constants.swift in Sources */,
 				3BE1311B1E242D2700AA7177 /* ManageCharitiesVC.swift in Sources */,
 				3BE131041E1D6B3C00AA7177 /* SignupVC.swift in Sources */,
+				3B5021931E26C29C004DD699 /* ContributionCell.swift in Sources */,
 				3BE131191E242C3C00AA7177 /* RoundUpsVC.swift in Sources */,
 				3BE131171E23132500AA7177 /* SWRevealViewController.m in Sources */,
 				3BE130EF1E1D60FA00AA7177 /* HomeVC.swift in Sources */,
