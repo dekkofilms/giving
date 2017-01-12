@@ -51,7 +51,7 @@ class HomeVC: UIViewController {
         tableView.dataSource = self
         
         self.tableView.contentInset = UIEdgeInsetsMake(-36, 0, 0, 0)
-        self.tableView.backgroundColor = UIColor.clear
+        self.tableView.backgroundColor = UIColor.init(red: 253/255, green: 254/255, blue: 254/255, alpha: 1.0)
         
         if self.revealViewController() != nil {
             menuButton.target = self.revealViewController()
@@ -127,6 +127,10 @@ extension HomeVC: UITableViewDataSource {
 }
 
 extension HomeVC: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        cell.backgroundColor = UIColor.clear
+    }
     
 }
 
