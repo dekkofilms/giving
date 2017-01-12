@@ -19,6 +19,9 @@
         <array key="Lato-Regular.ttf">
             <string>Lato-Regular</string>
         </array>
+        <array key="Lato-Thin.ttf">
+            <string>Lato-Thin</string>
+        </array>
     </customFonts>
     <scenes>
         <!--SigninVC-->
@@ -505,17 +508,89 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Round-Ups" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5li-Po-WVW">
-                                <rect key="frame" x="116" y="323" width="88" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PvK-BN-khO">
+                                <rect key="frame" x="0.0" y="64" width="320" height="603"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mIi-YV-bz1">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="3"/>
+                                        <color key="backgroundColor" red="0.84705882349999995" green="0.94117647059999998" blue="0.89411764709999997" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="3" id="JPw-SS-aep"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PdF-Ih-gri">
+                                        <rect key="frame" x="0.0" y="3" width="320" height="215"/>
+                                        <color key="backgroundColor" red="0.84705882349999995" green="0.94117647059999998" blue="0.89411764709999997" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="215" id="9PK-wg-0HM"/>
+                                        </constraints>
+                                    </view>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="75" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="NZp-cJ-KI4">
+                                        <rect key="frame" x="0.0" y="218" width="320" height="385"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <prototypes>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TransactionCell" rowHeight="75" id="7dv-Q5-Ypd" customClass="TransactionCell" customModule="giving" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="28" width="320" height="75"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7dv-Q5-Ypd" id="V4E-03-XXZ">
+                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="74"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+$1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RbL-We-Skr">
+                                                            <rect key="frame" x="8" y="8" width="101" height="36"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="36" id="u0x-08-XQr"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="Lato-Thin" family="Lato" pointSize="28"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$Amount Name " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KO0-2V-ksk">
+                                                            <rect key="frame" x="8" y="44" width="304" height="22"/>
+                                                            <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="14"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="KO0-2V-ksk" firstAttribute="top" secondItem="RbL-We-Skr" secondAttribute="bottom" id="290-RM-MUl"/>
+                                                        <constraint firstItem="KO0-2V-ksk" firstAttribute="trailing" secondItem="V4E-03-XXZ" secondAttribute="trailingMargin" id="HN4-Rc-Xow"/>
+                                                        <constraint firstAttribute="trailingMargin" secondItem="RbL-We-Skr" secondAttribute="trailing" constant="203" id="NHj-Ni-cB1"/>
+                                                        <constraint firstItem="RbL-We-Skr" firstAttribute="top" secondItem="V4E-03-XXZ" secondAttribute="topMargin" id="eTU-d5-2VG"/>
+                                                        <constraint firstItem="RbL-We-Skr" firstAttribute="leading" secondItem="V4E-03-XXZ" secondAttribute="leadingMargin" id="gNV-uN-Xq6"/>
+                                                        <constraint firstItem="KO0-2V-ksk" firstAttribute="leading" secondItem="V4E-03-XXZ" secondAttribute="leadingMargin" id="x7X-Tm-il7"/>
+                                                        <constraint firstItem="KO0-2V-ksk" firstAttribute="bottom" secondItem="V4E-03-XXZ" secondAttribute="bottomMargin" id="ysx-Tt-0eI"/>
+                                                    </constraints>
+                                                </tableViewCellContentView>
+                                                <connections>
+                                                    <outlet property="amountNameLabel" destination="KO0-2V-ksk" id="qe1-qX-Ybl"/>
+                                                    <outlet property="roundedLabel" destination="RbL-We-Skr" id="Tca-Vk-HAp"/>
+                                                </connections>
+                                            </tableViewCell>
+                                        </prototypes>
+                                    </tableView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.99215686270000003" green="0.99607843139999996" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="mIi-YV-bz1" firstAttribute="leading" secondItem="PvK-BN-khO" secondAttribute="leading" id="0Fu-rm-SLf"/>
+                                    <constraint firstAttribute="bottom" secondItem="NZp-cJ-KI4" secondAttribute="bottom" id="O9j-bF-vWe"/>
+                                    <constraint firstItem="NZp-cJ-KI4" firstAttribute="leading" secondItem="PvK-BN-khO" secondAttribute="leading" id="WE3-Er-D2M"/>
+                                    <constraint firstAttribute="trailing" secondItem="mIi-YV-bz1" secondAttribute="trailing" id="Xul-SR-VR7"/>
+                                    <constraint firstItem="NZp-cJ-KI4" firstAttribute="top" secondItem="PdF-Ih-gri" secondAttribute="bottom" id="Y0q-M8-05h"/>
+                                    <constraint firstItem="PdF-Ih-gri" firstAttribute="leading" secondItem="PvK-BN-khO" secondAttribute="leading" id="Yaf-uQ-g56"/>
+                                    <constraint firstItem="PdF-Ih-gri" firstAttribute="top" secondItem="mIi-YV-bz1" secondAttribute="bottom" id="YlG-yg-qCs"/>
+                                    <constraint firstItem="mIi-YV-bz1" firstAttribute="top" secondItem="PvK-BN-khO" secondAttribute="top" id="es1-Uc-nAx"/>
+                                    <constraint firstAttribute="trailing" secondItem="NZp-cJ-KI4" secondAttribute="trailing" id="kbF-Pi-Jj7"/>
+                                    <constraint firstAttribute="trailing" secondItem="PdF-Ih-gri" secondAttribute="trailing" id="xtf-mx-2im"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="5li-Po-WVW" firstAttribute="centerY" secondItem="ReM-mW-zH1" secondAttribute="centerY" id="Ls8-D5-aFD"/>
-                            <constraint firstItem="5li-Po-WVW" firstAttribute="centerX" secondItem="ReM-mW-zH1" secondAttribute="centerX" id="k3D-1H-h6f"/>
+                            <constraint firstAttribute="trailing" secondItem="PvK-BN-khO" secondAttribute="trailing" id="57U-3l-qRj"/>
+                            <constraint firstItem="PvK-BN-khO" firstAttribute="top" secondItem="2C6-dm-umm" secondAttribute="bottom" id="DDD-Ae-5Hz"/>
+                            <constraint firstItem="PvK-BN-khO" firstAttribute="leading" secondItem="ReM-mW-zH1" secondAttribute="leading" id="NlA-bX-gvJ"/>
+                            <constraint firstItem="VCN-ne-XSi" firstAttribute="top" secondItem="PvK-BN-khO" secondAttribute="bottom" id="mos-yu-L6J"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="SRQ-2w-4uh">
@@ -523,11 +598,12 @@
                     </navigationItem>
                     <connections>
                         <outlet property="menuButton" destination="KA8-BB-QIC" id="Hh1-yY-ljg"/>
+                        <outlet property="tableView" destination="NZp-cJ-KI4" id="0nv-Pr-WGR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qbo-48-sWR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6777" y="152"/>
+            <point key="canvasLocation" x="6776" y="151.57421289355324"/>
         </scene>
         <!--Manage CharitiesVC-->
         <scene sceneID="FNA-Uy-TFO">

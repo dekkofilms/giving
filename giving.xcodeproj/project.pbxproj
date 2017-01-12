@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B2751261E2718450067088D /* TransactionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2751251E2718450067088D /* TransactionCell.swift */; };
+		3B2751281E2718510067088D /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2751271E2718510067088D /* Transaction.swift */; };
 		3B5021931E26C29C004DD699 /* ContributionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5021921E26C29C004DD699 /* ContributionCell.swift */; };
 		3B5021951E26C329004DD699 /* Contribution.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5021941E26C329004DD699 /* Contribution.swift */; };
 		3B51DEC61E26B4C40086D648 /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B51DEC51E26B4C40086D648 /* ShadowView.swift */; };
@@ -48,6 +50,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3B2751251E2718450067088D /* TransactionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionCell.swift; sourceTree = "<group>"; };
+		3B2751271E2718510067088D /* Transaction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
 		3B5021921E26C29C004DD699 /* ContributionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContributionCell.swift; sourceTree = "<group>"; };
 		3B5021941E26C329004DD699 /* Contribution.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contribution.swift; sourceTree = "<group>"; };
 		3B51DEC51E26B4C40086D648 /* ShadowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShadowView.swift; sourceTree = "<group>"; };
@@ -150,6 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				3B5021941E26C329004DD699 /* Contribution.swift */,
+				3B2751271E2718510067088D /* Transaction.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -159,6 +164,7 @@
 			children = (
 				3B51DEC51E26B4C40086D648 /* ShadowView.swift */,
 				3B5021921E26C29C004DD699 /* ContributionCell.swift */,
+				3B2751251E2718450067088D /* TransactionCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -394,8 +400,10 @@
 				3B5021951E26C329004DD699 /* Contribution.swift in Sources */,
 				3BE131071E1DAA0D00AA7177 /* Constants.swift in Sources */,
 				3BE1311B1E242D2700AA7177 /* ManageCharitiesVC.swift in Sources */,
+				3B2751281E2718510067088D /* Transaction.swift in Sources */,
 				3BE131041E1D6B3C00AA7177 /* SignupVC.swift in Sources */,
 				3B5021931E26C29C004DD699 /* ContributionCell.swift in Sources */,
+				3B2751261E2718450067088D /* TransactionCell.swift in Sources */,
 				3BE131191E242C3C00AA7177 /* RoundUpsVC.swift in Sources */,
 				3BE131171E23132500AA7177 /* SWRevealViewController.m in Sources */,
 				3BE130EF1E1D60FA00AA7177 /* HomeVC.swift in Sources */,

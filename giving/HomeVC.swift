@@ -25,7 +25,7 @@ class HomeVC: UIViewController {
         if let id = KeychainWrapper.standard.integer(forKey: "id") {
             let parameters: Parameters = ["id" : id]
             
-            Alamofire.request("https://shielded-taiga-67588.herokuapp.com/user/given", method: .post, parameters: parameters).responseJSON(completionHandler: { (response) in
+            Alamofire.request("https://shielded-taiga-67588.herokuapp.com/user/dashboard", method: .post, parameters: parameters).responseJSON(completionHandler: { (response) in
                 let json = JSON(response.result.value!)
                 print("TAYLOR: PLEEEASSEEEEEEE: \(json)")
                 
