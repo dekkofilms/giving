@@ -23,7 +23,7 @@ class TransactionCell: UITableViewCell {
     func configureCell(transaction: Transaction) {
         self.newTransaction = transaction
         
-        self.roundedLabel.text = newTransaction.roundup
+        self.roundedLabel.text = "+$\(newTransaction.roundup)"
         self.amountNameLabel.text = "$\(newTransaction.chargeAmount) \(newTransaction.chargeName)"
     }
 

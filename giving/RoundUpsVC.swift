@@ -23,6 +23,9 @@ class RoundUpsVC: UIViewController {
         
         tableView.delegate = self
         tableView.dataSource = self
+        
+        self.tableView.contentInset = UIEdgeInsetsMake(-36, 0, 0, 0)
+        self.tableView.backgroundColor = UIColor.init(red: 253/255, green: 254/255, blue: 254/255, alpha: 1.0)
 
         // Do any additional setup after loading the view.
         if self.revealViewController() != nil {
@@ -38,9 +41,14 @@ class RoundUpsVC: UIViewController {
             let parameters: Parameters = ["id" : id]
             
             Alamofire.request("https://shielded-taiga-67588.herokuapp.com/user/roundups", method: .post, parameters: parameters).responseJSON { (response) in
-                let json = JSON(response.result.value)
+                let json = JSON(response.result.value!)
                 
+                for (_, value) in json["transactions"] {
+                    print("TAYLOR - transactions: \(value["rounded_amount"]) \(value["amount"]) \(value["name"])")
+                    self.transactions.append(Transaction(roundNum: value["rounded_amount"].stringValue, chargeAmount: value["amount"].stringValue, chargeName: value["name"].stringValue))
+                }
                 
+                self.tableView.reloadData()
             }
         }
         
@@ -53,17 +61,30 @@ class RoundUpsVC: UIViewController {
 extension RoundUpsVC: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return transactions.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "TransactionCell", for: indexPath)
+        
+        let transaction = transactions[indexPath.row] as Transaction
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "TransactionCell", for: indexPath) as! TransactionCell
+        cell.configureCell(transaction: transaction)
+        
+        cell.preservesSuperviewLayoutMargins = false
+        cell.separatorInset = UIEdgeInsets.zero
+        cell.layoutMargins = UIEdgeInsets.zero
         
         return cell
+        
     }
     
 }
 
 extension RoundUpsVC: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        cell.backgroundColor = UIColor.clear
+    }
     
 }

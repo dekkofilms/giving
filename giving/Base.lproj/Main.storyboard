@@ -525,12 +525,12 @@
                                             <constraint firstAttribute="height" constant="215" id="9PK-wg-0HM"/>
                                         </constraints>
                                     </view>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="75" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="NZp-cJ-KI4">
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" rowHeight="75" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="NZp-cJ-KI4">
                                         <rect key="frame" x="0.0" y="218" width="320" height="385"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TransactionCell" rowHeight="75" id="7dv-Q5-Ypd" customClass="TransactionCell" customModule="giving" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="28" width="320" height="75"/>
+                                                <rect key="frame" x="0.0" y="56" width="320" height="75"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7dv-Q5-Ypd" id="V4E-03-XXZ">
                                                     <rect key="frame" x="0.0" y="0.0" width="320" height="74"/>
@@ -617,21 +617,47 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Manage Charities" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A11-ZE-oxK">
-                                <rect key="frame" x="93" y="323" width="134" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ai9-YF-14i">
+                                <rect key="frame" x="0.0" y="64" width="320" height="603"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ieb-x4-0t8">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="3"/>
+                                        <color key="backgroundColor" red="0.84705882349999995" green="0.94117647059999998" blue="0.89411764709999997" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="3" id="cud-aW-ZkS"/>
+                                        </constraints>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Charities" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S6b-6j-WPY">
+                                        <rect key="frame" x="30" y="28" width="184.5" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="Qwl-hB-Ly3"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="ieb-x4-0t8" firstAttribute="top" secondItem="ai9-YF-14i" secondAttribute="top" id="CGf-wm-G2B"/>
+                                    <constraint firstAttribute="trailing" secondItem="ieb-x4-0t8" secondAttribute="trailing" id="GHv-cV-CP4"/>
+                                    <constraint firstItem="S6b-6j-WPY" firstAttribute="leading" secondItem="ai9-YF-14i" secondAttribute="leading" constant="30" id="mTC-pA-VU3"/>
+                                    <constraint firstItem="ieb-x4-0t8" firstAttribute="leading" secondItem="ai9-YF-14i" secondAttribute="leading" id="oBI-w3-yUB"/>
+                                    <constraint firstItem="S6b-6j-WPY" firstAttribute="top" secondItem="ieb-x4-0t8" secondAttribute="bottom" constant="25" id="szS-gZ-qa2"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="A11-ZE-oxK" firstAttribute="centerY" secondItem="lFC-QW-BVK" secondAttribute="centerY" id="8B0-p6-8wP"/>
-                            <constraint firstItem="A11-ZE-oxK" firstAttribute="centerX" secondItem="lFC-QW-BVK" secondAttribute="centerX" id="jcX-vf-TvV"/>
+                            <constraint firstItem="81R-V3-aAQ" firstAttribute="top" secondItem="ai9-YF-14i" secondAttribute="bottom" id="4ns-Yp-wJd"/>
+                            <constraint firstItem="ai9-YF-14i" firstAttribute="top" secondItem="IFg-v3-vPH" secondAttribute="bottom" id="Lqb-co-8D0"/>
+                            <constraint firstAttribute="trailing" secondItem="ai9-YF-14i" secondAttribute="trailing" id="N91-3L-G4H"/>
+                            <constraint firstItem="ai9-YF-14i" firstAttribute="leading" secondItem="lFC-QW-BVK" secondAttribute="leading" id="WKh-Mb-98o"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="WyY-Sx-uZt">
                         <barButtonItem key="leftBarButtonItem" title="Menu" id="A5n-be-yjA"/>
+                        <barButtonItem key="rightBarButtonItem" title="+" id="Gtk-D1-VxK"/>
                     </navigationItem>
                     <connections>
                         <outlet property="menuButton" destination="A5n-be-yjA" id="2Pt-JB-JF1"/>
@@ -639,7 +665,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5hl-n0-aCc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6777" y="894"/>
+            <point key="canvasLocation" x="6776" y="893.70314842578716"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Fxo-fr-EwN">

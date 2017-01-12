@@ -29,6 +29,7 @@ class HomeVC: UIViewController {
                 let json = JSON(response.result.value!)
                 print("TAYLOR: PLEEEASSEEEEEEE: \(json)")
                 
+                //Let me figure out a way to pass the currentRoundUp and amountGiven to the other views that need it from here!!!
                 self.amountGivenNumber.text = "$\(json["given"])"
                 self.userFirstName.text = "\(json["username"])"
                 self.currentRoundUp.text = "$\(json["currentRoundUp"])"
