@@ -36,7 +36,10 @@ class HomeVC: UIViewController {
                 for (key, value) in json["specificCharityTotal"] {
                     print("TAYLOR ___---: \(key) && \(value)")
                     self.donations.append(Contribution(name: key, amount: value.stringValue))
+                    print("TAYLOR ARRAY: \(self.donations.count)")
                 }
+                
+                self.tableView.reloadData()
                 
             })
         }
@@ -47,6 +50,10 @@ class HomeVC: UIViewController {
         
         tableView.delegate = self
         tableView.dataSource = self
+        
+        //table fix
+        self.tableView.contentInset = UIEdgeInsetsMake(-36, 0, 0, 0);
+        self.tableView.backgroundColor = UIColor.clear
         
         if self.revealViewController() != nil {
             menuButton.target = self.revealViewController()
@@ -104,6 +111,7 @@ extension HomeVC: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        print("TAYLOR: TABLE \(donations.count)")
         return donations.count
     }
     
@@ -112,6 +120,14 @@ extension HomeVC: UITableViewDataSource {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "ContributionCell", for: indexPath) as! ContributionCell
         cell.configureCell(contribution: donation)
+        
+        cell.preservesSuperviewLayoutMargins = false
+        cell.separatorInset = UIEdgeInsets.zero
+        cell.layoutMargins = UIEdgeInsets.zero
+        
+//        if (indexPath.row == donations.count) {
+//            cell.separatorInset = UIEdgeInsetsMake(0.0, 0.0, 0.0, cell.bounds.size.width)
+//        }
         
         return cell
     }
