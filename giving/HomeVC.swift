@@ -68,7 +68,7 @@ class HomeVC: UIViewController {
         if user == nil {
             let sb = UIStoryboard(name: "Main", bundle: nil)
             let signinNavVC = sb.instantiateViewController(withIdentifier: "SigninNavVC")
-            present(signinNavVC, animated: true, completion: nil)
+            present(signinNavVC, animated: false, completion: nil)
         }
         
         let token = KeychainWrapper.standard.string(forKey: "access_token")

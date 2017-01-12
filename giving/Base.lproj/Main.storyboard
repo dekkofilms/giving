@@ -19,6 +19,9 @@
         <array key="Lato-Regular.ttf">
             <string>Lato-Regular</string>
         </array>
+        <array key="Lato-Semibold.ttf">
+            <string>Lato-Semibold</string>
+        </array>
         <array key="Lato-Thin.ttf">
             <string>Lato-Thin</string>
         </array>
@@ -636,14 +639,59 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" rowHeight="90" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="xkW-1A-CgC">
+                                        <rect key="frame" x="30" y="93" width="260" height="502"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        <prototypes>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CharityCell" rowHeight="90" id="PCJ-ts-EMZ" customClass="CharityCell" customModule="giving" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="56" width="260" height="90"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="PCJ-ts-EMZ" id="2iR-IE-7uB">
+                                                    <rect key="frame" x="0.0" y="0.0" width="260" height="89"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Goodwill" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="op7-PR-EiW">
+                                                            <rect key="frame" x="18" y="18" width="224" height="20"/>
+                                                            <fontDescription key="fontDescription" name="Lato-Semibold" family="Lato" pointSize="17"/>
+                                                            <color key="textColor" red="0.08235294118" green="0.76470588240000004" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is going to be a tiny description of the charity" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BWQ-s2-ZjF">
+                                                            <rect key="frame" x="18" y="38" width="224" height="36"/>
+                                                            <fontDescription key="fontDescription" name="Lato-Light" family="Lato" pointSize="15"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="op7-PR-EiW" firstAttribute="leading" secondItem="2iR-IE-7uB" secondAttribute="leadingMargin" constant="10" id="1rv-s4-YQX"/>
+                                                        <constraint firstItem="BWQ-s2-ZjF" firstAttribute="top" secondItem="op7-PR-EiW" secondAttribute="bottom" id="6X1-Ja-Y17"/>
+                                                        <constraint firstAttribute="trailingMargin" secondItem="BWQ-s2-ZjF" secondAttribute="trailing" constant="10" id="G0A-r5-RIk"/>
+                                                        <constraint firstItem="op7-PR-EiW" firstAttribute="top" secondItem="2iR-IE-7uB" secondAttribute="topMargin" constant="10" id="TZf-HZ-QXf"/>
+                                                        <constraint firstAttribute="bottomMargin" secondItem="BWQ-s2-ZjF" secondAttribute="bottom" constant="8" id="Z2d-Br-rOc"/>
+                                                        <constraint firstAttribute="trailingMargin" secondItem="op7-PR-EiW" secondAttribute="trailing" constant="10" id="rKx-NI-HN4"/>
+                                                        <constraint firstItem="BWQ-s2-ZjF" firstAttribute="leading" secondItem="2iR-IE-7uB" secondAttribute="leadingMargin" constant="10" id="xs9-dH-9mB"/>
+                                                    </constraints>
+                                                </tableViewCellContentView>
+                                                <connections>
+                                                    <outlet property="charityDescriptionLabel" destination="BWQ-s2-ZjF" id="12f-ok-UYf"/>
+                                                    <outlet property="charityNameLabel" destination="op7-PR-EiW" id="YvZ-dK-c7a"/>
+                                                </connections>
+                                            </tableViewCell>
+                                        </prototypes>
+                                    </tableView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="xkW-1A-CgC" secondAttribute="bottom" constant="8" id="2KJ-hH-OXr"/>
+                                    <constraint firstItem="xkW-1A-CgC" firstAttribute="top" secondItem="S6b-6j-WPY" secondAttribute="bottom" constant="25" id="BYg-hD-u71"/>
                                     <constraint firstItem="ieb-x4-0t8" firstAttribute="top" secondItem="ai9-YF-14i" secondAttribute="top" id="CGf-wm-G2B"/>
                                     <constraint firstAttribute="trailing" secondItem="ieb-x4-0t8" secondAttribute="trailing" id="GHv-cV-CP4"/>
                                     <constraint firstItem="S6b-6j-WPY" firstAttribute="leading" secondItem="ai9-YF-14i" secondAttribute="leading" constant="30" id="mTC-pA-VU3"/>
                                     <constraint firstItem="ieb-x4-0t8" firstAttribute="leading" secondItem="ai9-YF-14i" secondAttribute="leading" id="oBI-w3-yUB"/>
+                                    <constraint firstAttribute="trailing" secondItem="xkW-1A-CgC" secondAttribute="trailing" constant="30" id="oa5-ez-xtV"/>
                                     <constraint firstItem="S6b-6j-WPY" firstAttribute="top" secondItem="ieb-x4-0t8" secondAttribute="bottom" constant="25" id="szS-gZ-qa2"/>
+                                    <constraint firstItem="xkW-1A-CgC" firstAttribute="leading" secondItem="ai9-YF-14i" secondAttribute="leading" constant="30" id="weB-cS-Mp4"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -661,6 +709,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="menuButton" destination="A5n-be-yjA" id="2Pt-JB-JF1"/>
+                        <outlet property="tableView" destination="xkW-1A-CgC" id="KPa-dj-eBz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5hl-n0-aCc" userLabel="First Responder" sceneMemberID="firstResponder"/>
