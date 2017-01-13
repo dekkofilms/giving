@@ -11,9 +11,11 @@ This is an app designed to safely and securely round up all your approved transa
 
 ## Team
 
-[![Sindre Sorhus](http://gravatar.com/avatar/d36a92237c75c5337c17b60d90686bf9?s=144)](https://sindresorhus.com) | [![Kevin Mårtensson](https://gravatar.com/avatar/48fa294e3cd41680b80d3ed6345c7b4d?s=144)](https://github.com/kevva) | [![Sam Verschueren](https://gravatar.com/avatar/30aba8d6414326b745aa2516f5067d53?s=144)](https://github.com/SamVerschueren)
+
+
+[![Imgur](http://i.imgur.com/krUFrpL.jpg)](https://sindresorhus.com)
 ---|---|---
-[Sindre Sorhus](https://sindresorhus.com) | [Kevin Mårtensson](https://github.com/kevva) | [Sam Verschueren](https://github.com/SamVerschueren)
+[Imgur](http://i.imgur.com/krUFrpL.jpg) | [Kevin Mårtensson](https://github.com/kevva) | [Sam Verschueren](https://github.com/SamVerschueren)
 
 
 ## License
