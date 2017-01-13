@@ -48,6 +48,7 @@
 		3BE131401E24319900AA7177 /* Lato-SemiboldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3BE1312E1E24319900AA7177 /* Lato-SemiboldItalic.ttf */; };
 		3BE131411E24319900AA7177 /* Lato-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3BE1312F1E24319900AA7177 /* Lato-Thin.ttf */; };
 		3BE131421E24319900AA7177 /* Lato-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3BE131301E24319900AA7177 /* Lato-ThinItalic.ttf */; };
+		3BFA2B891E287BBB00585809 /* AddCharityVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BFA2B881E287BBB00585809 /* AddCharityVC.swift */; };
 		690FD469597D905202F8D76A /* Pods_giving.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B018209D342ABBB4B2E19567 /* Pods_giving.framework */; };
 /* End PBXBuildFile section */
 
@@ -98,6 +99,7 @@
 		3BE1312E1E24319900AA7177 /* Lato-SemiboldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-SemiboldItalic.ttf"; sourceTree = "<group>"; };
 		3BE1312F1E24319900AA7177 /* Lato-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Thin.ttf"; sourceTree = "<group>"; };
 		3BE131301E24319900AA7177 /* Lato-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-ThinItalic.ttf"; sourceTree = "<group>"; };
+		3BFA2B881E287BBB00585809 /* AddCharityVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddCharityVC.swift; sourceTree = "<group>"; };
 		9A36045BBB55A0DC9A090752 /* Pods-giving.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-giving.release.xcconfig"; path = "Pods/Target Support Files/Pods-giving/Pods-giving.release.xcconfig"; sourceTree = "<group>"; };
 		B018209D342ABBB4B2E19567 /* Pods_giving.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_giving.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8D301EA194299301FFE735A /* Pods-giving.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-giving.debug.xcconfig"; path = "Pods/Target Support Files/Pods-giving/Pods-giving.debug.xcconfig"; sourceTree = "<group>"; };
@@ -186,6 +188,7 @@
 				3BE131181E242C3C00AA7177 /* RoundUpsVC.swift */,
 				3BE1311A1E242D2700AA7177 /* ManageCharitiesVC.swift */,
 				3BE1311C1E242D9F00AA7177 /* SettingsVC.swift */,
+				3BFA2B881E287BBB00585809 /* AddCharityVC.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -411,6 +414,7 @@
 				3B2751281E2718510067088D /* Transaction.swift in Sources */,
 				3BE131041E1D6B3C00AA7177 /* SignupVC.swift in Sources */,
 				3B5021931E26C29C004DD699 /* ContributionCell.swift in Sources */,
+				3BFA2B891E287BBB00585809 /* AddCharityVC.swift in Sources */,
 				3B2751261E2718450067088D /* TransactionCell.swift in Sources */,
 				3BE131191E242C3C00AA7177 /* RoundUpsVC.swift in Sources */,
 				3BE131171E23132500AA7177 /* SWRevealViewController.m in Sources */,

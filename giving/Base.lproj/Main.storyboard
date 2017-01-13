@@ -634,15 +634,15 @@
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Charities" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S6b-6j-WPY">
-                                        <rect key="frame" x="30" y="28" width="167.5" height="40"/>
+                                        <rect key="frame" x="30" y="28" width="114" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="Qwl-hB-Ly3"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="30"/>
+                                        <fontDescription key="fontDescription" name="Lato-Thin" family="Lato" pointSize="21"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" rowHeight="90" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="xkW-1A-CgC">
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" allowsSelection="NO" rowHeight="90" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="xkW-1A-CgC">
                                         <rect key="frame" x="30" y="93" width="260" height="502"/>
                                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                         <prototypes>
@@ -653,27 +653,27 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="260" height="89"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Goodwill" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="op7-PR-EiW">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Goodwill" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="op7-PR-EiW">
                                                             <rect key="frame" x="18" y="18" width="224" height="20"/>
                                                             <fontDescription key="fontDescription" name="Lato-Semibold" family="Lato" pointSize="17"/>
                                                             <color key="textColor" red="0.08235294118" green="0.76470588240000004" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="This is going to be a tiny description of the charity" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BWQ-s2-ZjF">
-                                                            <rect key="frame" x="18" y="38" width="224" height="35"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is going to be a tiny description of the charity" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BWQ-s2-ZjF">
+                                                            <rect key="frame" x="18" y="39" width="224" height="34"/>
                                                             <fontDescription key="fontDescription" name="Lato-Light" family="Lato" pointSize="15"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
                                                     <constraints>
-                                                        <constraint firstItem="op7-PR-EiW" firstAttribute="leading" secondItem="2iR-IE-7uB" secondAttribute="leadingMargin" constant="10" id="1rv-s4-YQX"/>
-                                                        <constraint firstItem="BWQ-s2-ZjF" firstAttribute="top" secondItem="op7-PR-EiW" secondAttribute="bottom" id="6X1-Ja-Y17"/>
-                                                        <constraint firstAttribute="trailingMargin" secondItem="BWQ-s2-ZjF" secondAttribute="trailing" constant="10" id="G0A-r5-RIk"/>
-                                                        <constraint firstItem="op7-PR-EiW" firstAttribute="top" secondItem="2iR-IE-7uB" secondAttribute="topMargin" constant="10" id="TZf-HZ-QXf"/>
-                                                        <constraint firstAttribute="bottomMargin" secondItem="BWQ-s2-ZjF" secondAttribute="bottom" constant="8" id="Z2d-Br-rOc"/>
-                                                        <constraint firstAttribute="trailingMargin" secondItem="op7-PR-EiW" secondAttribute="trailing" constant="10" id="rKx-NI-HN4"/>
-                                                        <constraint firstItem="BWQ-s2-ZjF" firstAttribute="leading" secondItem="2iR-IE-7uB" secondAttribute="leadingMargin" constant="10" id="xs9-dH-9mB"/>
+                                                        <constraint firstItem="op7-PR-EiW" firstAttribute="top" secondItem="2iR-IE-7uB" secondAttribute="topMargin" constant="10" id="0Jz-Xp-uRr"/>
+                                                        <constraint firstAttribute="trailingMargin" secondItem="BWQ-s2-ZjF" secondAttribute="trailing" constant="10" id="9ld-uC-uSc"/>
+                                                        <constraint firstItem="op7-PR-EiW" firstAttribute="leading" secondItem="2iR-IE-7uB" secondAttribute="leadingMargin" constant="10" id="JJw-Mn-Zp3"/>
+                                                        <constraint firstAttribute="bottomMargin" secondItem="BWQ-s2-ZjF" secondAttribute="bottom" constant="8" id="RT6-74-W7U"/>
+                                                        <constraint firstItem="BWQ-s2-ZjF" firstAttribute="top" secondItem="2iR-IE-7uB" secondAttribute="topMargin" constant="31" id="c5H-De-blc"/>
+                                                        <constraint firstItem="BWQ-s2-ZjF" firstAttribute="leading" secondItem="2iR-IE-7uB" secondAttribute="leadingMargin" constant="10" id="cUT-lK-Jbr"/>
+                                                        <constraint firstAttribute="trailingMargin" secondItem="op7-PR-EiW" secondAttribute="trailing" constant="10" id="yQA-Bi-kXT"/>
                                                     </constraints>
                                                 </tableViewCellContentView>
                                                 <connections>
@@ -684,7 +684,7 @@
                                         </prototypes>
                                     </tableView>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.99215686274509807" green="0.99607843137254903" blue="0.99607843137254903" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="xkW-1A-CgC" secondAttribute="bottom" constant="8" id="2KJ-hH-OXr"/>
                                     <constraint firstItem="xkW-1A-CgC" firstAttribute="top" secondItem="S6b-6j-WPY" secondAttribute="bottom" constant="25" id="BYg-hD-u71"/>
@@ -708,7 +708,11 @@
                     </view>
                     <navigationItem key="navigationItem" id="WyY-Sx-uZt">
                         <barButtonItem key="leftBarButtonItem" title="Menu" id="A5n-be-yjA"/>
-                        <barButtonItem key="rightBarButtonItem" title="+" id="Gtk-D1-VxK"/>
+                        <barButtonItem key="rightBarButtonItem" title="+" id="Gtk-D1-VxK">
+                            <connections>
+                                <segue destination="gJu-2R-NG6" kind="show" id="iCe-kC-tMg"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="menuButton" destination="A5n-be-yjA" id="2Pt-JB-JF1"/>
@@ -718,6 +722,110 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5hl-n0-aCc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="6776" y="893.70314842578716"/>
+        </scene>
+        <!--Add CharityVC-->
+        <scene sceneID="nR1-i0-O5f">
+            <objects>
+                <viewController id="gJu-2R-NG6" customClass="AddCharityVC" customModule="giving" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="mK7-iO-FvB"/>
+                        <viewControllerLayoutGuide type="bottom" id="t83-Pd-U2P"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ayb-6X-wgA">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start giving to" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DnT-Fy-8Pw">
+                                <rect key="frame" x="46" y="89" width="130" height="27"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="27" id="Lqy-M0-3DV"/>
+                                    <constraint firstAttribute="width" constant="130" id="r4I-Tg-ieZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Lato-Thin" family="Lato" pointSize="21"/>
+                                <color key="textColor" red="0.08235294118" green="0.76470588240000004" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="some awesome places" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x7U-Mu-Im0">
+                                <rect key="frame" x="46" y="113" width="200" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="HVH-EJ-TKg"/>
+                                    <constraint firstAttribute="width" constant="200" id="R6o-DD-Vn6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Lato-Thin" family="Lato" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" rowHeight="90" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="WUg-vT-r98">
+                                <rect key="frame" x="46" y="166" width="228" height="493"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CharityCell" rowHeight="90" id="SZw-c7-ryt" customClass="CharityCell" customModule="giving" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="56" width="228" height="90"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="SZw-c7-ryt" id="kUY-NQ-oA5">
+                                            <rect key="frame" x="0.0" y="0.0" width="228" height="89"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Goodwill" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CLf-wX-5KP">
+                                                    <rect key="frame" x="10" y="10" width="208" height="20"/>
+                                                    <fontDescription key="fontDescription" name="Lato-Semibold" family="Lato" pointSize="17"/>
+                                                    <color key="textColor" red="0.08235294118" green="0.76470588240000004" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is going to be a tiny description of the charity" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pf8-Fo-sOS">
+                                                    <rect key="frame" x="10" y="31" width="208" height="50.5"/>
+                                                    <fontDescription key="fontDescription" name="Lato-Light" family="Lato" pointSize="15"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="CLf-wX-5KP" firstAttribute="leading" secondItem="kUY-NQ-oA5" secondAttribute="leading" constant="10" id="4Um-pZ-6uN"/>
+                                                <constraint firstAttribute="trailing" secondItem="CLf-wX-5KP" secondAttribute="trailing" constant="10" id="7vy-LD-rgq"/>
+                                                <constraint firstItem="CLf-wX-5KP" firstAttribute="top" secondItem="kUY-NQ-oA5" secondAttribute="top" constant="10" id="Qch-VI-Hwq"/>
+                                                <constraint firstItem="pf8-Fo-sOS" firstAttribute="top" secondItem="kUY-NQ-oA5" secondAttribute="top" constant="31" id="cE7-jy-VLE"/>
+                                                <constraint firstItem="pf8-Fo-sOS" firstAttribute="leading" secondItem="kUY-NQ-oA5" secondAttribute="leading" constant="10" id="p0n-j2-N5e"/>
+                                                <constraint firstAttribute="trailing" secondItem="pf8-Fo-sOS" secondAttribute="trailing" constant="10" id="q6l-bp-NHe"/>
+                                                <constraint firstAttribute="bottom" secondItem="pf8-Fo-sOS" secondAttribute="bottom" constant="8" id="urp-lW-EJD"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="charityDescriptionLabel" destination="pf8-Fo-sOS" id="IPr-Yh-oB3"/>
+                                            <outlet property="charityNameLabel" destination="CLf-wX-5KP" id="kVV-Q3-45e"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bXm-uE-Ew5">
+                                <rect key="frame" x="0.0" y="64" width="320" height="3"/>
+                                <color key="backgroundColor" red="0.84705882349999995" green="0.94117647059999998" blue="0.89411764709999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="3" id="aI0-z2-mCj"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.99215686274509807" green="0.99607843137254903" blue="0.99607843137254903" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="bXm-uE-Ew5" firstAttribute="leading" secondItem="Ayb-6X-wgA" secondAttribute="leading" id="9m7-tg-oqF"/>
+                            <constraint firstItem="x7U-Mu-Im0" firstAttribute="leading" secondItem="Ayb-6X-wgA" secondAttribute="leadingMargin" constant="30" id="RrW-xC-fWk"/>
+                            <constraint firstItem="DnT-Fy-8Pw" firstAttribute="leading" secondItem="Ayb-6X-wgA" secondAttribute="leadingMargin" constant="30" id="SS3-rB-vl4"/>
+                            <constraint firstItem="bXm-uE-Ew5" firstAttribute="top" secondItem="mK7-iO-FvB" secondAttribute="bottom" id="SWN-kz-Mcv"/>
+                            <constraint firstAttribute="trailing" secondItem="bXm-uE-Ew5" secondAttribute="trailing" id="YhY-yF-8hp"/>
+                            <constraint firstItem="WUg-vT-r98" firstAttribute="top" secondItem="x7U-Mu-Im0" secondAttribute="bottom" constant="25" id="iZs-cv-JOo"/>
+                            <constraint firstItem="WUg-vT-r98" firstAttribute="leading" secondItem="Ayb-6X-wgA" secondAttribute="leadingMargin" constant="30" id="jA6-cc-3KC"/>
+                            <constraint firstItem="x7U-Mu-Im0" firstAttribute="top" secondItem="mK7-iO-FvB" secondAttribute="bottom" constant="49" id="l1d-Io-Ukn"/>
+                            <constraint firstItem="t83-Pd-U2P" firstAttribute="top" secondItem="WUg-vT-r98" secondAttribute="bottom" constant="8" id="qZi-Cr-Gwh"/>
+                            <constraint firstItem="DnT-Fy-8Pw" firstAttribute="top" secondItem="mK7-iO-FvB" secondAttribute="bottom" constant="25" id="wIa-1V-xXc"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="WUg-vT-r98" secondAttribute="trailing" constant="30" id="ypl-my-xH0"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="WUg-vT-r98" id="Ddb-PT-7g9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="u1N-YP-Ybs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7691.1999999999998" y="893.70314842578716"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Fxo-fr-EwN">

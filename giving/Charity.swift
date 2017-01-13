@@ -13,6 +13,7 @@ class Charity {
     private var _charityName: String!
     private var _charityDescription: String!
     private var _optionID: Int!
+    private var _charityID: Int!
     
     var charityName: String {
         return _charityName
@@ -26,9 +27,20 @@ class Charity {
         return _optionID
     }
     
-    init(name: String, description: String, id: Int) {
+    var charityID: Int {
+        return _charityID
+    }
+    
+    init(name: String, description: String, optionID: Int) {
         self._charityName = name
         self._charityDescription = description
-        self._optionID = id
+        self._optionID = optionID
     }
+    
+    init(name: String, description: String, charityID: Int) {
+        self._charityName = name
+        self._charityDescription = description
+        self._charityID = charityID
+    }
+    
 }

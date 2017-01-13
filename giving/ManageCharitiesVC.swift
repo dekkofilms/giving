@@ -54,9 +54,11 @@ class ManageCharitiesVC: UIViewController {
             Alamofire.request("https://shielded-taiga-67588.herokuapp.com/user/charities", method: .post, parameters: parameters).responseJSON(completionHandler: { (response) in
                 let json = JSON(response.result.value!)
                 
+                self.charities.removeAll()
+                
                 for (_, value) in json["options"] {
                     print("TAYLOR -- CHARITIES: \(value["name"])")
-                    self.charities.append(Charity(name: value["name"].stringValue, description: value["description"].stringValue, id: value["id"].int!))
+                    self.charities.append(Charity(name: value["name"].stringValue, description: value["description"].stringValue, optionID: value["id"].int!))
                 }
                 
                 self.tableView.reloadData()
@@ -112,11 +114,11 @@ extension ManageCharitiesVC: UITableViewDataSource {
             Alamofire.request(url, method: .delete).responseJSON(completionHandler: { (response) in
                 
                 if response.result.isFailure {
-                    print("TAYLOR: Couldn't delete charity option")
+                    //handle error here
+                    
                 }
                 
                 if response.result.isSuccess {
-                    print("TAYLOR: Charity option successfully deleted")
                     self.charities.remove(at: indexPath.row)
                     self.tableView.reloadData()
                 }
