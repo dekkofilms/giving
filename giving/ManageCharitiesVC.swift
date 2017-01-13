@@ -104,13 +104,12 @@ extension ManageCharitiesVC: UITableViewDataSource {
         let charity = charities[indexPath.row]
         
         let delete = UITableViewRowAction(style: .normal, title: "Delete") { action, indexPath in
-            print("TAYLOR: \(charity)")
             
             let optionID = charity.optionID
-            let parameters: Parameters = ["id" : optionID]
+            let url = "https://shielded-taiga-67588.herokuapp.com/user/charities/\(optionID)"
+            print("TAYLOR: \(charity.optionID)")
             
-            Alamofire.request("https://shielded-taiga-67588.herokuapp.com/user/charities", method: .delete, parameters: parameters).responsePropertyList(completionHandler: { (response) in
-                let _ = JSON(response.result.value!)
+            Alamofire.request(url, method: .delete).responseJSON(completionHandler: { (response) in
                 
                 if response.result.isFailure {
                     print("TAYLOR: Couldn't delete charity option")
@@ -118,6 +117,8 @@ extension ManageCharitiesVC: UITableViewDataSource {
                 
                 if response.result.isSuccess {
                     print("TAYLOR: Charity option successfully deleted")
+                    self.charities.remove(at: indexPath.row)
+                    self.tableView.reloadData()
                 }
                 
             })
