@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>CircleProgressView.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-giving.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -27,22 +32,27 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>1F62391A905B07F208A933B0DD88AF73</key>
+		<key>190A04454A6442217C9C91DA914159E8</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>47BB9B02FB42A8A3018BF129DDF01999</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>58A847DDD74E9470F19554D54F99095F</key>
+		<key>326BE90E6ED8045F3530124802FE00AE</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>88E9EC28B8B46C3631E6B242B50F4442</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C60D9331ADCD6BB7CC34C2ED37FE5CE2</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>DBE2337041ECB8B8F8D92BC8378B419E</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -15,9 +15,9 @@ class HomeVC: UIViewController {
 
     @IBOutlet weak var menuButton: UIBarButtonItem!
     @IBOutlet weak var amountGivenNumber: UILabel!
-    @IBOutlet weak var userFirstName: UILabel!
     @IBOutlet weak var currentRoundUp: UILabel!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var roundupNeeded: UILabel!
     
     var donations = [Contribution]()
     
@@ -31,8 +31,8 @@ class HomeVC: UIViewController {
                 
                 //Let me figure out a way to pass the currentRoundUp and amountGiven to the other views that need it from here!!!
                 self.amountGivenNumber.text = "$\(json["given"])"
-                self.userFirstName.text = "\(json["username"])"
                 self.currentRoundUp.text = "$\(json["currentRoundUp"])"
+                self.roundupNeeded.text = "$\(json["roundToGo"])"
                 
                 for (key, value) in json["specificCharityTotal"] {
                     print("TAYLOR ___---: \(key) && \(value)")

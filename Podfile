@@ -9,5 +9,6 @@ target 'giving' do
   pod 'Alamofire', '~> 4.0'
   pod 'SwiftKeychainWrapper'
   pod 'SwiftyJSON'
+  pod 'CircleProgressView', :git => 'https://github.com/CardinalNow/iOS-CircleProgressView.git'
 
 end
