@@ -15,9 +15,7 @@ This is an app designed to safely and securely round up all your approved transa
 
 [![Imgur](http://i.imgur.com/krUFrpL.jpg)](https://sindresorhus.com)
 ---|---|---
-[Imgur](http://i.imgur.com/krUFrpL.jpg) | [Kevin Mårtensson](https://github.com/kevva) | [Sam Verschueren](https://github.com/SamVerschueren)
+[Imgur](http://i.imgur.com/krUFrpL.jpg)
 
 
 ## License
-
-MIT © [Sindre Sorhus](https://sindresorhus.com)
