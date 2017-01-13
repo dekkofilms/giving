@@ -17,9 +17,13 @@ It will automatically push your round ups to the organizations that you choose o
 ## Technologies & API Usage
 
 Node.js
+
 Postgres
+
 Swift
+
 Plaid
+
 Stripe
 
 ## License
