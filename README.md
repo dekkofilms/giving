@@ -7,7 +7,7 @@ Capture screenshots of websites in various resolutions. A good way to make sure 
 
 ## Welcome to Giving
 
-[Imgur](http://i.imgur.com/smXhS7E.png)
+# ![Imgur](http://i.imgur.com/smXhS7E.png)
 
 ```
 $ npm install --save pageres
