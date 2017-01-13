@@ -1,4 +1,6 @@
-# ![Imgur](http://i.imgur.com/Bwv9Kwz.png)
+<p align="center">
+  <img src="http://i.imgur.com/Bwv9Kwz.png">
+</p>
 
 # ![Imgur](http://i.imgur.com/smXhS7E.png)
 
