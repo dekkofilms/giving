@@ -9,6 +9,7 @@
 import UIKit
 import Alamofire
 import SwiftyJSON
+import SwiftKeychainWrapper
 
 class AddCharityVC: UIViewController {
     
@@ -53,6 +54,45 @@ extension AddCharityVC: UITableViewDelegate {
         cell.backgroundColor = UIColor.clear
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let charity = charities[indexPath.row] as Charity! else { return }
+        
+        let alertController: UIAlertController = UIAlertController(title: "Add this Charity?", message: "", preferredStyle: UIAlertControllerStyle.alert)
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel) { (result) in
+        }
+        
+        let okAction = UIAlertAction(title: "Add", style: UIAlertActionStyle.default) { (result) in
+            print("TAYLOR: \(charity.charityID)")
+            
+            if let user_id = KeychainWrapper.standard.integer(forKey: "id") {
+                
+                let parameters: Parameters = ["charity_id" : charity.charityID, "user_id" : user_id]
+                
+                Alamofire.request("https://shielded-taiga-67588.herokuapp.com/user/add/charity", method: .post, parameters: parameters).responseJSON(completionHandler: { (response) in
+                    
+                    if response.result.isFailure {
+                        print("CANT ADD IT")
+                    }
+                    
+                    if response.result.isSuccess {
+                        print("BOOM ADDED")
+                    }
+                    
+                })
+                
+            }
+            
+        }
+        
+        alertController.addAction(cancelAction)
+        alertController.addAction(okAction)
+        
+        present(alertController, animated: true) {
+        }
+        
+    }
+    
 }
 
 extension AddCharityVC: UITableViewDataSource {
@@ -66,6 +106,11 @@ extension AddCharityVC: UITableViewDataSource {
         let charity = charities[indexPath.row] as Charity
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "CharityCell", for: indexPath) as! CharityCell
+        
+        let bgColorView = UIView()
+        //rgb(216,240,228) --- light green
+        bgColorView.backgroundColor = UIColor.init(red: 216/255, green: 240/255, blue: 228/255, alpha: 1.0)
+        cell.selectedBackgroundView = bgColorView
         
         cell.configureCell(charity: charity)
         

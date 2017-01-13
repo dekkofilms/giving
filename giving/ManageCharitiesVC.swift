@@ -54,10 +54,12 @@ class ManageCharitiesVC: UIViewController {
             Alamofire.request("https://shielded-taiga-67588.herokuapp.com/user/charities", method: .post, parameters: parameters).responseJSON(completionHandler: { (response) in
                 let json = JSON(response.result.value!)
                 
+                print("TAYLOR: CHARS: \(json)")
+                
                 self.charities.removeAll()
                 
                 for (_, value) in json["options"] {
-                    print("TAYLOR -- CHARITIES: \(value["name"])")
+                    print("TAYLOR -- CHARITIES: \(value["name"]) \(value)")
                     self.charities.append(Charity(name: value["name"].stringValue, description: value["description"].stringValue, optionID: value["id"].int!))
                 }
                 

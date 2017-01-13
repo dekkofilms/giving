@@ -47,8 +47,12 @@ class SigninVC: UIViewController {
             if let result = response.result.value {
                 let JSON = result as! NSDictionary
                 
+                print("TAYLOR: SIGNIN --- \(result)")
+                
                 KeychainWrapper.standard.set(JSON["token"] as! String, forKey: KEY_UID)
                 KeychainWrapper.standard.set(JSON["id"] as! Int, forKey: "id")
+                KeychainWrapper.standard.set(JSON["access_token"] as! String, forKey: "access_token")
+                
                 self.dismiss(animated: true, completion: nil)
             }
             

@@ -107,6 +107,7 @@ class AddBankVC: UIViewController, WKNavigationDelegate {
                             
                             if let token = JSON["access_token"], let bank_account_token = JSON["bank_account_token"] {
                                 print("TAYLOR___SETTING KEYCHAIN: \(token) & \(bank_account_token)")
+                                
                                 KeychainWrapper.standard.set(token as! String, forKey: "access_token")
                                 KeychainWrapper.standard.set(bank_account_token as! String, forKey: "bank_account_token")
                                 

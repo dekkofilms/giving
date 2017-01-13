@@ -9,6 +9,7 @@
 import UIKit
 import Alamofire
 import SwiftKeychainWrapper
+import SwiftyJSON
 
 class SignupVC: UIViewController {
 
@@ -52,6 +53,7 @@ class SignupVC: UIViewController {
                 if let token = JSON["token"], let id = JSON["id"] {
                     KeychainWrapper.standard.set(token as! String, forKey: KEY_UID)
                     KeychainWrapper.standard.set(id as! Int, forKey: "id")
+                    print("TAYLOR: SIGNING UP ID \(id)")
                     //self.presentingViewController!.presentingViewController!.dismiss(animated: true, completion: nil)
                 }
             }

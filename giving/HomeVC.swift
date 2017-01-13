@@ -23,18 +23,28 @@ class HomeVC: UIViewController {
     var donations = [Contribution]()
     
     override func viewWillAppear(_ animated: Bool) {
+        
         if let id = KeychainWrapper.standard.integer(forKey: "id") {
+            
             let parameters: Parameters = ["id" : id]
             
+            print("TAYLOR - lololololol: \(parameters)")
+            
             Alamofire.request("https://shielded-taiga-67588.herokuapp.com/user/dashboard", method: .post, parameters: parameters).responseJSON(completionHandler: { (response) in
-                let json = JSON(response.result.value!)
-                print("TAYLOR: PLEEEASSEEEEEEE: \(json)")
                 
+                if response.result.isFailure {
+                    return
+                }
+                
+                let json = JSON(response.result.value!)
+                    
+                print("TAYLOR: PLEEEASSEEEEEEE: \(json)")
+                    
                 //Let me figure out a way to pass the currentRoundUp and amountGiven to the other views that need it from here!!!
                 self.amountGivenNumber.text = "$\(json["given"])"
                 self.currentRoundUp.text = "$\(json["currentRoundUp"])"
                 self.roundupNeeded.text = "$\(json["roundToGo"])"
-                
+                    
                 for (key, value) in json["specificCharityTotal"] {
                     print("TAYLOR ___---: \(key) && \(value)")
                     self.donations.append(Contribution(name: key, amount: value.stringValue))
@@ -42,8 +52,10 @@ class HomeVC: UIViewController {
                 
                 self.tableView.reloadData()
                 
+                
             })
         }
+        
     }
     
     override func viewDidLoad() {
@@ -82,6 +94,7 @@ class HomeVC: UIViewController {
     @IBAction func signOutButtonTapped(_ sender: Any) {
         KeychainWrapper.standard.removeObject(forKey: KEY_UID)
         KeychainWrapper.standard.removeObject(forKey: "id")
+        KeychainWrapper.standard.removeObject(forKey: "access_token")
         
         let sb = UIStoryboard(name: "Main", bundle: nil)
         let signinNavVC = sb.instantiateViewController(withIdentifier: "SigninNavVC")
