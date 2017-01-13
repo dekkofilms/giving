@@ -12,7 +12,8 @@ import SwiftKeychainWrapper
 import Alamofire
 
 class HomeVC: UIViewController {
-
+    
+    
     @IBOutlet weak var menuButton: UIBarButtonItem!
     @IBOutlet weak var amountGivenNumber: UILabel!
     @IBOutlet weak var currentRoundUp: UILabel!

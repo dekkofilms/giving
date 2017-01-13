@@ -56,7 +56,7 @@ class ManageCharitiesVC: UIViewController {
                 
                 for (_, value) in json["options"] {
                     print("TAYLOR -- CHARITIES: \(value["name"])")
-                    self.charities.append(Charity(name: value["name"].stringValue, description: value["description"].stringValue))
+                    self.charities.append(Charity(name: value["name"].stringValue, description: value["description"].stringValue, id: value["id"].int!))
                 }
                 
                 self.tableView.reloadData()
@@ -97,6 +97,37 @@ extension ManageCharitiesVC: UITableViewDataSource {
         
         return cell
         
+    }
+    
+    @objc(tableView:editActionsForRowAtIndexPath:) func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        
+        let charity = charities[indexPath.row]
+        
+        let delete = UITableViewRowAction(style: .normal, title: "Delete") { action, indexPath in
+            print("TAYLOR: \(charity)")
+            
+            let optionID = charity.optionID
+            let parameters: Parameters = ["id" : optionID]
+            
+            Alamofire.request("https://shielded-taiga-67588.herokuapp.com/user/charities", method: .delete, parameters: parameters).responsePropertyList(completionHandler: { (response) in
+                let _ = JSON(response.result.value!)
+                
+                if response.result.isFailure {
+                    print("TAYLOR: Couldn't delete charity option")
+                }
+                
+                if response.result.isSuccess {
+                    print("TAYLOR: Charity option successfully deleted")
+                }
+                
+            })
+            
+            
+        }
+        //rgb(21,195,152) -- green
+        delete.backgroundColor = UIColor.init(red: 21/255, green: 195/255, blue: 152/255, alpha: 1.0)
+        
+        return [delete]
     }
     
 }
