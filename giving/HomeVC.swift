@@ -36,6 +36,8 @@ class HomeVC: UIViewController {
                     return
                 }
                 
+                self.donations.removeAll()
+                
                 let json = JSON(response.result.value!)
                     
                 print("TAYLOR: PLEEEASSEEEEEEE: \(json)")
