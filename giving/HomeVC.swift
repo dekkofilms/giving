@@ -46,7 +46,11 @@ class HomeVC: UIViewController {
                 self.amountGivenNumber.text = "$\(json["given"])"
                 self.currentRoundUp.text = "$\(json["currentRoundUp"])"
                 self.roundupNeeded.text = "$\(json["roundToGo"])"
-                    
+                
+                let defaults = UserDefaults.standard
+                defaults.setValue("$\(json["currentRoundUp"])", forKey: "currentRoundUp")
+                defaults.setValue("$\(json["roundToGo"])", forKey: "roundToGo")
+                
                 for (key, value) in json["specificCharityTotal"] {
                     print("TAYLOR ___---: \(key) && \(value)")
                     self.donations.append(Contribution(name: key, amount: Double(round(value.doubleValue*100)/100)))

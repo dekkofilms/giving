@@ -15,6 +15,8 @@ class RoundUpsVC: UIViewController {
     
     @IBOutlet weak var menuButton: UIBarButtonItem!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var currentRoundUp: UILabel!
+    @IBOutlet weak var roundupToGo: UILabel!
     
     var transactions = [Transaction]()
 
@@ -51,6 +53,9 @@ class RoundUpsVC: UIViewController {
                 self.tableView.reloadData()
             }
         }
+        
+        currentRoundUp.text = UserDefaults.standard.string(forKey: "currentRoundUp")
+        roundupToGo.text = UserDefaults.standard.string(forKey: "roundToGo")
         
     }
     
