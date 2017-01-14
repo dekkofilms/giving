@@ -549,7 +549,7 @@
                                                 <rect key="frame" x="0.0" y="56" width="320" height="75"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7dv-Q5-Ypd" id="V4E-03-XXZ">
-                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="74"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="75"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+$1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RbL-We-Skr">
@@ -660,7 +660,7 @@
                                                 <rect key="frame" x="0.0" y="56" width="260" height="90"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="PCJ-ts-EMZ" id="2iR-IE-7uB">
-                                                    <rect key="frame" x="0.0" y="0.0" width="260" height="89"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="260" height="90"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Goodwill" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="op7-PR-EiW">
@@ -773,7 +773,7 @@
                                         <rect key="frame" x="0.0" y="56" width="228" height="90"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="SZw-c7-ryt" id="kUY-NQ-oA5">
-                                            <rect key="frame" x="0.0" y="0.0" width="228" height="89"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="228" height="90"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Goodwill" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CLf-wX-5KP">
@@ -971,7 +971,7 @@
                                                 <rect key="frame" x="0.0" y="56" width="260" height="70"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Vqo-PP-Mvw" id="AJt-cx-gup">
-                                                    <rect key="frame" x="0.0" y="0.0" width="260" height="69"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="260" height="70"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Charity Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gmN-Jm-WOI">
@@ -1079,7 +1079,7 @@
                         <nil key="title"/>
                         <barButtonItem key="leftBarButtonItem" title="Menu" id="HwF-Fb-MAK"/>
                         <view key="titleView" contentMode="scaleToFill" id="z0U-EH-ck1">
-                            <rect key="frame" x="85" y="6" width="150" height="33"/>
+                            <rect key="frame" x="85" y="5.5" width="150" height="33"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dashboard" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fsq-zH-idm">

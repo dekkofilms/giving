@@ -11,17 +11,17 @@ import Foundation
 class Contribution {
     
     private var _charityName: String!
-    private var _charityAmount: String!
+    private var _charityAmount: Double!
     
     var charityName: String {
         return _charityName
     }
     
-    var charityAmount: String {
+    var charityAmount: Double{
         return _charityAmount
     }
     
-    init(name: String, amount: String) {
+    init(name: String, amount: Double) {
         self._charityName = name
         self._charityAmount = amount
     }

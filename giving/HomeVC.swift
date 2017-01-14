@@ -47,7 +47,7 @@ class HomeVC: UIViewController {
                     
                 for (key, value) in json["specificCharityTotal"] {
                     print("TAYLOR ___---: \(key) && \(value)")
-                    self.donations.append(Contribution(name: key, amount: value.stringValue))
+                    self.donations.append(Contribution(name: key, amount: Double(round(value.doubleValue*100)/100)))
                 }
                 
                 self.tableView.reloadData()
@@ -72,6 +72,7 @@ class HomeVC: UIViewController {
             menuButton.action = #selector(SWRevealViewController.revealToggle(_:))
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {

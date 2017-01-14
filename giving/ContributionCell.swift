@@ -23,7 +23,8 @@ class ContributionCell: UITableViewCell {
     func configureCell(contribution: Contribution) {
         self.newContribution = contribution
         self.charityNameLabel.text = newContribution.charityName
-        self.charityTotalAmount.text = newContribution.charityAmount
+        self.charityTotalAmount.text = "$" + String(format: "%.2f", newContribution.charityAmount)
+//        self.charityTotalAmount.text = "\(newContribution.charityAmount)"
     }
 
 }
