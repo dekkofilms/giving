@@ -10,5 +10,6 @@ target 'giving' do
   pod 'SwiftKeychainWrapper'
   pod 'SwiftyJSON'
   pod 'CircleProgressView', :git => 'https://github.com/CardinalNow/iOS-CircleProgressView.git'
+  pod 'Whisper'
 
 end

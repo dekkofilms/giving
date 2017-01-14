@@ -546,10 +546,10 @@
                                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TransactionCell" rowHeight="75" id="7dv-Q5-Ypd" customClass="TransactionCell" customModule="giving" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="56" width="320" height="75"/>
+                                                <rect key="frame" x="0.0" y="55.5" width="320" height="75"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7dv-Q5-Ypd" id="V4E-03-XXZ">
-                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="75"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="74.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+$1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RbL-We-Skr">
@@ -610,7 +610,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="SRQ-2w-4uh">
-                        <barButtonItem key="leftBarButtonItem" title="Menu" id="KA8-BB-QIC"/>
+                        <barButtonItem key="leftBarButtonItem" image="MenuButton" id="KA8-BB-QIC">
+                            <inset key="imageInsets" minX="0.0" minY="10" maxX="20" maxY="5"/>
+                            <color key="tintColor" red="0.08235294118" green="0.76470588240000004" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="menuButton" destination="KA8-BB-QIC" id="Hh1-yY-ljg"/>
@@ -657,10 +660,10 @@
                                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CharityCell" rowHeight="90" id="PCJ-ts-EMZ" customClass="CharityCell" customModule="giving" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="56" width="260" height="90"/>
+                                                <rect key="frame" x="0.0" y="55.5" width="260" height="90"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="PCJ-ts-EMZ" id="2iR-IE-7uB">
-                                                    <rect key="frame" x="0.0" y="0.0" width="260" height="90"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="260" height="89.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Goodwill" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="op7-PR-EiW">
@@ -717,8 +720,13 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="WyY-Sx-uZt">
-                        <barButtonItem key="leftBarButtonItem" title="Menu" id="A5n-be-yjA"/>
-                        <barButtonItem key="rightBarButtonItem" title="+" id="Gtk-D1-VxK">
+                        <barButtonItem key="leftBarButtonItem" image="MenuButton" id="A5n-be-yjA">
+                            <inset key="imageInsets" minX="0.0" minY="10" maxX="20" maxY="5"/>
+                            <color key="tintColor" red="0.08235294118" green="0.76470588240000004" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Gtk-D1-VxK">
+                            <inset key="imageInsets" minX="0.0" minY="10" maxX="0.0" maxY="0.0"/>
+                            <color key="tintColor" red="0.08235294118" green="0.76470588240000004" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <segue destination="gJu-2R-NG6" kind="show" id="iCe-kC-tMg"/>
                             </connections>
@@ -770,10 +778,10 @@
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CharityCell" rowHeight="90" id="SZw-c7-ryt" customClass="CharityCell" customModule="giving" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="56" width="228" height="90"/>
+                                        <rect key="frame" x="0.0" y="55.5" width="228" height="90"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="SZw-c7-ryt" id="kUY-NQ-oA5">
-                                            <rect key="frame" x="0.0" y="0.0" width="228" height="90"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="228" height="89.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Goodwill" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CLf-wX-5KP">
@@ -968,10 +976,10 @@
                                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ContributionCell" rowHeight="70" id="Vqo-PP-Mvw" customClass="ContributionCell" customModule="giving" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="56" width="260" height="70"/>
+                                                <rect key="frame" x="0.0" y="55.5" width="260" height="70"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Vqo-PP-Mvw" id="AJt-cx-gup">
-                                                    <rect key="frame" x="0.0" y="0.0" width="260" height="70"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="260" height="69.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Charity Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gmN-Jm-WOI">
@@ -1077,7 +1085,10 @@
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <navigationItem key="navigationItem" id="DKl-29-x0o">
                         <nil key="title"/>
-                        <barButtonItem key="leftBarButtonItem" title="Menu" id="HwF-Fb-MAK"/>
+                        <barButtonItem key="leftBarButtonItem" image="MenuButton" id="HwF-Fb-MAK">
+                            <inset key="imageInsets" minX="0.0" minY="10" maxX="20" maxY="5"/>
+                            <color key="tintColor" red="0.08235294118" green="0.76470588240000004" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
+                        </barButtonItem>
                         <view key="titleView" contentMode="scaleToFill" id="z0U-EH-ck1">
                             <rect key="frame" x="85" y="5.5" width="150" height="33"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1097,7 +1108,8 @@
                                 <constraint firstItem="Fsq-zH-idm" firstAttribute="top" secondItem="z0U-EH-ck1" secondAttribute="top" constant="6" id="oET-HJ-G8G"/>
                             </constraints>
                         </view>
-                        <barButtonItem key="rightBarButtonItem" title="Sign Out" id="iBp-Pa-cvs">
+                        <barButtonItem key="rightBarButtonItem" title="Sign Out" style="plain" id="iBp-Pa-cvs">
+                            <color key="tintColor" red="0.08235294118" green="0.76470588240000004" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <action selector="signOutButtonTapped:" destination="BYZ-38-t0r" id="kXA-l6-dmd"/>
                             </connections>
@@ -1246,7 +1258,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="prx-Gj-jXw">
-                        <barButtonItem key="leftBarButtonItem" title="Menu" id="zVE-42-Chv"/>
+                        <barButtonItem key="leftBarButtonItem" image="MenuButton" id="zVE-42-Chv">
+                            <inset key="imageInsets" minX="0.0" minY="10" maxX="20" maxY="5"/>
+                            <color key="tintColor" red="0.08235294118" green="0.76470588240000004" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="menuButton" destination="zVE-42-Chv" id="Ngz-Do-xWX"/>
@@ -1277,6 +1292,9 @@
             <point key="canvasLocation" x="5784.8000000000002" y="1639.4302848575715"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="MenuButton" width="50" height="34"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="e7D-ei-5lq"/>
     </inferredMetricsTieBreakers>

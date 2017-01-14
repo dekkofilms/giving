@@ -3,12 +3,14 @@ PODS:
   - CircleProgressView (1.0.13)
   - SwiftKeychainWrapper (3.0.1)
   - SwiftyJSON (3.1.4)
+  - Whisper (4.0.0)
 
 DEPENDENCIES:
   - Alamofire (~> 4.0)
   - CircleProgressView (from `https://github.com/CardinalNow/iOS-CircleProgressView.git`)
   - SwiftKeychainWrapper
   - SwiftyJSON
+  - Whisper
 
 EXTERNAL SOURCES:
   CircleProgressView:
@@ -24,7 +26,8 @@ SPEC CHECKSUMS:
   CircleProgressView: 65283c9f23483889421c6e3c89f5e1a9b0e0ff19
   SwiftKeychainWrapper: 38952a3636320ae61bad3513cadd870929de7a4a
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
+  Whisper: 08be92623311f8e53201e62e17f6d7b9599a4714
 
-PODFILE CHECKSUM: c897d71b831a3ae97ace35679a28a48b4a66e8f4
+PODFILE CHECKSUM: 29e0fb4c2c64b6ab96a0ac90526945ad49afc41b
 
 COCOAPODS: 1.1.1

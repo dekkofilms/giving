@@ -10,6 +10,7 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 import SwiftKeychainWrapper
+import Whisper
 
 class AddCharityVC: UIViewController {
     
@@ -59,6 +60,12 @@ extension AddCharityVC: UITableViewDelegate {
         
         let alertController: UIAlertController = UIAlertController(title: "Add this Charity?", message: "", preferredStyle: UIAlertControllerStyle.alert)
         
+        let subview = alertController.view.subviews.first! as UIView
+        let alertContentView = subview.subviews.first! as UIView
+        
+        alertContentView.backgroundColor = UIColor.white
+        alertContentView.layer.cornerRadius = 15
+        
         let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel) { (result) in
         }
         
@@ -71,12 +78,25 @@ extension AddCharityVC: UITableViewDelegate {
                 
                 Alamofire.request("https://shielded-taiga-67588.herokuapp.com/user/add/charity", method: .post, parameters: parameters).responseJSON(completionHandler: { (response) in
                     
-                    if response.result.isFailure {
-                        print("CANT ADD IT")
+                    let json = JSON(response.result.value!)
+                    
+                    print("TAYLOR RESPONSE: \(json["response"])")
+                    
+                    if json["response"] == "exists" {
+                        
+                        //rgb(95,120,109) -- darker green
+                        let message = Message(title: "You've already added this!", textColor: UIColor.white, backgroundColor: UIColor.init(red: 95/255, green: 120/255, blue: 109/255, alpha: 1.0))
+                        
+                        Whisper.show(whisper: message, to: self.navigationController!)
+                        
                     }
                     
-                    if response.result.isSuccess {
-                        print("BOOM ADDED")
+                    if json["response"] == "added" {
+                        
+                        //rgb(21,195,152) -- green
+                        let message = Message(title: "Good Choice!", textColor: UIColor.white, backgroundColor: UIColor.init(red: 21/255, green: 195/255, blue: 152/255, alpha: 1.0))
+                        
+                        Whisper.show(whisper: message, to: self.navigationController!)
                     }
                     
                 })

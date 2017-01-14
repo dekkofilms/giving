@@ -26,8 +26,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         navigationBarAppearance.shadowImage = UIImage()
         navigationBarAppearance.setBackgroundImage(UIImage(), for: .default)
         
-        //text color is black
-        navigationBarAppearance.tintColor = UIColor(red: 0/255, green: 0/255, blue: 0/255, alpha: 1.0)
+        //text color is green -- //rgb(21,195,152) -- green
+        navigationBarAppearance.tintColor = UIColor(red: 21/255, green: 195/255, blue: 152/255, alpha: 1.0)
         //background color is white
         navigationBarAppearance.barTintColor = UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1.0)
         
