@@ -16,11 +16,36 @@ class SignupVC: UIViewController {
     @IBOutlet weak var usernameField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     
-    
+    var isKeyboardPresent: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(SigninVC.keyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(SigninVC.keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
 
+    }
+    
+    func keyboardWillShow(notification: NSNotification) {
+        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
+            
+            if isKeyboardPresent == false {
+                self.view.frame.origin.y -= keyboardSize.height - 85
+                isKeyboardPresent = true
+            }
+            
+        }
+    }
+    
+    func keyboardWillHide(notification: NSNotification) {
+        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
+            
+            if isKeyboardPresent == true {
+                self.view.frame.origin.y += keyboardSize.height - 85
+                isKeyboardPresent = false
+            }
+            
+        }
     }
     
     @IBAction func signupBtnTapped(_ sender: Any) {
