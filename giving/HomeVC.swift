@@ -22,6 +22,39 @@ class HomeVC: UIViewController {
     
     var donations = [Contribution]()
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        let user = KeychainWrapper.standard.string(forKey: KEY_UID)
+        
+        if user == nil {
+            let sb = UIStoryboard(name: "Main", bundle: nil)
+            let signinNavVC = sb.instantiateViewController(withIdentifier: "SigninNavVC")
+            present(signinNavVC, animated: false, completion: nil)
+        }
+        
+        let token = KeychainWrapper.standard.string(forKey: "access_token")
+        
+        if token != nil {
+            getUserTransactions()
+        }
+        
+        tableView.delegate = self
+        tableView.dataSource = self
+        
+        self.tableView.contentInset = UIEdgeInsetsMake(-36, 0, 0, 0)
+        self.tableView.backgroundColor = UIColor.init(red: 253/255, green: 254/255, blue: 254/255, alpha: 1.0)
+        
+        if self.revealViewController() != nil {
+            menuButton.target = self.revealViewController()
+            menuButton.action = #selector(SWRevealViewController.revealToggle(_:))
+            self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+        }
+        
+        self.revealViewController().rearViewRevealWidth = 200
+        
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         
         if let id = KeychainWrapper.standard.integer(forKey: "id") {
@@ -36,12 +69,14 @@ class HomeVC: UIViewController {
                     return
                 }
                 
+                print("TAYLOR: readedeaw: \(response.result.value)")
+                
                 self.donations.removeAll()
                 
                 let json = JSON(response.result.value!)
-                    
+                
                 print("TAYLOR: PLEEEASSEEEEEEE: \(json)")
-                    
+                
                 //Let me figure out a way to pass the currentRoundUp and amountGiven to the other views that need it from here!!!
                 self.amountGivenNumber.text = "$\(json["given"])"
                 self.currentRoundUp.text = "$\(json["currentRoundUp"])"
@@ -64,44 +99,20 @@ class HomeVC: UIViewController {
         
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        tableView.delegate = self
-        tableView.dataSource = self
-        
-        self.tableView.contentInset = UIEdgeInsetsMake(-36, 0, 0, 0)
-        self.tableView.backgroundColor = UIColor.init(red: 253/255, green: 254/255, blue: 254/255, alpha: 1.0)
-        
-        if self.revealViewController() != nil {
-            menuButton.target = self.revealViewController()
-            menuButton.action = #selector(SWRevealViewController.revealToggle(_:))
-            self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
-        }
-        
-    }
-    
     override func viewDidAppear(_ animated: Bool) {
         
-        let user = KeychainWrapper.standard.string(forKey: KEY_UID)
-        
-        if user == nil {
-            let sb = UIStoryboard(name: "Main", bundle: nil)
-            let signinNavVC = sb.instantiateViewController(withIdentifier: "SigninNavVC")
-            present(signinNavVC, animated: false, completion: nil)
-        }
-        
-        let token = KeychainWrapper.standard.string(forKey: "access_token")
-        
-        if token != nil {
-            getUserTransactions()
-        }
+
     }
 
     @IBAction func signOutButtonTapped(_ sender: Any) {
         KeychainWrapper.standard.removeObject(forKey: KEY_UID)
         KeychainWrapper.standard.removeObject(forKey: "id")
         KeychainWrapper.standard.removeObject(forKey: "access_token")
+        
+        let prefs = UserDefaults.standard
+        prefs.removeObject(forKey: "currentRoundUp")
+        prefs.removeObject(forKey: "roundToGo")
+        prefs.synchronize()
         
         let sb = UIStoryboard(name: "Main", bundle: nil)
         let signinNavVC = sb.instantiateViewController(withIdentifier: "SigninNavVC")
@@ -131,7 +142,9 @@ extension HomeVC: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
         return donations.count
+        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

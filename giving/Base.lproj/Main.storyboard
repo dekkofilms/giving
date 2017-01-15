@@ -168,7 +168,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GIVING" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oza-na-BnT">
-                                                    <rect key="frame" x="8" y="8" width="107.5" height="28"/>
+                                                    <rect key="frame" x="8" y="8" width="108" height="28"/>
                                                     <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="31"/>
                                                     <color key="textColor" red="0.08235294118" green="0.76470588240000004" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -424,10 +424,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="Id0-s6-dDx">
-                                <rect key="frame" x="46" y="294" width="228" height="79"/>
+                                <rect key="frame" x="46" y="294" width="229" height="79"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="First name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UKf-v5-Zem">
-                                        <rect key="frame" x="-1.5" y="8" width="200" height="27"/>
+                                        <rect key="frame" x="-1" y="8" width="200" height="27"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="27" id="r4T-RX-iWe"/>
                                             <constraint firstAttribute="width" constant="200" id="ves-qF-h24"/>
@@ -437,7 +437,7 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Last name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RHS-K7-jyA">
-                                        <rect key="frame" x="-1.5" y="44" width="200" height="27"/>
+                                        <rect key="frame" x="-1" y="44" width="200" height="27"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="200" id="Hgx-PU-lpO"/>
                                             <constraint firstAttribute="height" constant="27" id="kRW-3B-NfY"/>
@@ -559,7 +559,7 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8yE-Ue-jlM" customClass="CircleProgressView" customModule="CircleProgressView">
                                                 <rect key="frame" x="98" y="66" width="125" height="125"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$4.34" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K2c-IR-gQc">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K2c-IR-gQc">
                                                         <rect key="frame" x="30" y="40" width="65" height="28"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="28" id="GEd-8k-aDJ"/>
@@ -571,7 +571,7 @@
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="eiS-kc-i08">
                                                         <rect key="frame" x="28" y="68" width="68" height="16"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0.66" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I3d-3h-A3x">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$5.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I3d-3h-A3x">
                                                                 <rect key="frame" x="0.0" y="0.0" width="33.5" height="16"/>
                                                                 <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="13"/>
                                                                 <color key="textColor" red="0.99215686270000003" green="0.99607843139999996" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
@@ -602,7 +602,7 @@
                                                 </constraints>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="progress">
-                                                        <real key="value" value="0.56000000000000005"/>
+                                                        <real key="value" value="0.78000000000000003"/>
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="clockwise" value="YES"/>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="trackWidth">
@@ -710,9 +710,9 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="currentRoundUp" destination="K2c-IR-gQc" id="lAR-ZN-WTS"/>
+                        <outlet property="currentRoundUp" destination="K2c-IR-gQc" id="lUj-TY-Y1W"/>
                         <outlet property="menuButton" destination="KA8-BB-QIC" id="Hh1-yY-ljg"/>
-                        <outlet property="roundupToGo" destination="I3d-3h-A3x" id="rMk-eJ-Asg"/>
+                        <outlet property="roundupToGo" destination="I3d-3h-A3x" id="xlq-VX-XrZ"/>
                         <outlet property="tableView" destination="NZp-cJ-KI4" id="0nv-Pr-WGR"/>
                     </connections>
                 </viewController>
@@ -763,7 +763,7 @@
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Goodwill" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="op7-PR-EiW">
-                                                            <rect key="frame" x="18" y="18" width="224" height="20"/>
+                                                            <rect key="frame" x="18" y="18" width="224" height="21"/>
                                                             <fontDescription key="fontDescription" name="Lato-Semibold" family="Lato" pointSize="17"/>
                                                             <color key="textColor" red="0.08235294118" green="0.76470588240000004" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
@@ -881,13 +881,13 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Goodwill" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CLf-wX-5KP">
-                                                    <rect key="frame" x="10" y="10" width="208" height="20"/>
+                                                    <rect key="frame" x="10" y="10" width="208" height="21"/>
                                                     <fontDescription key="fontDescription" name="Lato-Semibold" family="Lato" pointSize="17"/>
                                                     <color key="textColor" red="0.08235294118" green="0.76470588240000004" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is going to be a tiny description of the charity" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pf8-Fo-sOS">
-                                                    <rect key="frame" x="10" y="31" width="208" height="51"/>
+                                                    <rect key="frame" x="10" y="31" width="208" height="50"/>
                                                     <fontDescription key="fontDescription" name="Lato-Light" family="Lato" pointSize="15"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -993,7 +993,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iiR-7X-132" customClass="CircleProgressView" customModule="CircleProgressView">
                                         <rect key="frame" x="30" y="100" width="125" height="125"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$4.34" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tHR-8p-Mgf">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tHR-8p-Mgf">
                                                 <rect key="frame" x="30" y="40" width="65" height="28"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="28" id="Su2-Bo-Y3x"/>
@@ -1005,7 +1005,7 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="6fJ-Dg-eY6">
                                                 <rect key="frame" x="28" y="67" width="68" height="16"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0.66" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tlx-ih-hZS">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$5.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tlx-ih-hZS">
                                                         <rect key="frame" x="0.0" y="0.0" width="33.5" height="16"/>
                                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="13"/>
                                                         <nil key="textColor"/>
@@ -1034,7 +1034,7 @@
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="progress">
-                                                <real key="value" value="0.56000000000000005"/>
+                                                <real key="value" value="0.78000000000000003"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="clockwise" value="YES"/>
                                             <userDefinedRuntimeAttribute type="number" keyPath="trackWidth">
@@ -1067,7 +1067,7 @@
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" rowHeight="70" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="MIv-vd-qMC">
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" allowsSelection="NO" rowHeight="70" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="MIv-vd-qMC">
                                         <rect key="frame" x="30" y="314" width="260" height="281"/>
                                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                         <prototypes>
@@ -1112,7 +1112,7 @@
                                             <constraint firstAttribute="height" constant="3" id="3Uv-o1-J33"/>
                                         </constraints>
                                     </view>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$150" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g0x-ap-DcX">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g0x-ap-DcX">
                                         <rect key="frame" x="30" y="31" width="260" height="44"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="Ien-aF-RX6"/>

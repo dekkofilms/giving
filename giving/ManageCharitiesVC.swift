@@ -37,6 +37,8 @@ class ManageCharitiesVC: UIViewController {
             menuButton.action = #selector(SWRevealViewController.revealToggle(_:))
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
+        
+        self.revealViewController().rearViewRevealWidth = 200
     }
     
     override func viewWillAppear(_ animated: Bool) {

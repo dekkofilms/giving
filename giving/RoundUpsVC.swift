@@ -35,6 +35,8 @@ class RoundUpsVC: UIViewController {
             menuButton.action = #selector(SWRevealViewController.revealToggle(_:))
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
+        
+        self.revealViewController().rearViewRevealWidth = 200
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -54,8 +56,12 @@ class RoundUpsVC: UIViewController {
             }
         }
         
-        currentRoundUp.text = UserDefaults.standard.string(forKey: "currentRoundUp")
-        roundupToGo.text = UserDefaults.standard.string(forKey: "roundToGo")
+        
+        if UserDefaults.standard.string(forKey: "currentRoundUp") != nil {
+            print("TAYLOR: \(UserDefaults.standard.string(forKey: "currentRoundUp"))")
+            currentRoundUp.text = UserDefaults.standard.string(forKey: "currentRoundUp")
+            roundupToGo.text = UserDefaults.standard.string(forKey: "roundToGo")
+        }
         
     }
     
