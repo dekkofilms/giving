@@ -3,7 +3,7 @@
 #### Thanks for Giving!
 
 <p align="center">
-  <img src="http://imgur.com/bSHR8sj">
+  <img src="http://i.imgur.com/bSHR8sj.png" max-width="100%">
 </p>
 
 ___
