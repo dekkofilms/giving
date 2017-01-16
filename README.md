@@ -24,11 +24,14 @@ Technologies & API's used:
 
 ## Walkthrough:
 
-#### 1
+### 1.
 
 Link up your bank account in a secure and safe way!
 
-<img src="http://i.imgur.com/N3gc9dZ.png" align="right" width="100px">
+<img src="http://i.imgur.com/N3gc9dZ.png" align="right" width="300px">
+
+### 2.
+
 
 
 <!-- # ![Imgur](http://i.imgur.com/smXhS7E.png) -->
