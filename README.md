@@ -32,6 +32,9 @@ Link up your bank account in a secure and safe way!
 
 ### 2.
 
+Choose a few of your favorite charities
+
+<img src="http://i.imgur.com/N3gc9dZ.png" align="right" width="300px">
 
 
 <!-- # ![Imgur](http://i.imgur.com/smXhS7E.png) -->
