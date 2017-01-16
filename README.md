@@ -8,7 +8,7 @@
 
 #### This is an iOS app built in Swift by Taylor King.
 
-This app was built to not only make giving easy, but more of a routine that is consistent in our lives. There are many awesome organizations and charities that would hopefully benefit from such an app.
+Make giving easy and routine! There are many awesome organizations and charities that would hopefully benefit from such an app.
 
 Technologies & API's used:
 
@@ -22,9 +22,9 @@ Technologies & API's used:
 
 ## Challenges:
 
-* This is my first big iOS app that I tackled in Swift, and I really really enjoyed writing in Swift when I have mainly been a Javascript developer. I learned a lot about a strong typed language, and interacting with a GUI for the first time building it in Xcode.
+* This is my first big iOS app that I tackled in Swift. Mainly coding in Javascript in the past, it was really fun interacting with a new and strong-typed language. I learned a lot about a strongly typed language, and interacting with a GUI for the first time building it in Xcode.
 
-* Linking a user's bank account was a minor hurdle just because the API I worked with didn't actually have native swift integration for the app, so the work around was using a WKWebview in Xcode that loads up a page within my app, and then it works as functions.
+* Linking a user's bank account was a minor hurdle just because the API I worked with didn't actually have native swift integration for the app, so the work around was using a WKWebview in Xcode. That loads up a page within my app, and then it works as functions.
 
 * Rounding up NEW transactions was a fun and interesting challenge. I interacted with Webhooks that Plaid provides. They check 4-6 times a day for new activity in users banks', and I was specifically interested in their Webhook code 2. When that gets fired off, the coding magic happens.
 
