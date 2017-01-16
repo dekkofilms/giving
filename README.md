@@ -20,7 +20,16 @@ Technologies & API's used:
 * Plaid
 * Stripe
 
-___
+## Challenges:
+
+## Walkthrough:
+
+#### 1
+
+Link up your bank account in a secure and safe way!
+
+<img src="http://i.imgur.com/bSHR8sj.png" style="float: right">
+
 
 # ![Imgur](http://i.imgur.com/smXhS7E.png)
 
