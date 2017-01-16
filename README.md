@@ -38,7 +38,7 @@ Choose a few of your favorite charities
 
 ### 3.
 
-##### That's it!
+That's it!
 
 This is an app designed to safely and securely round up all of your approved transactions to the nearest dollar, and give what's left over to awesome charities and non-profits that you choose. It will automatically push your round ups to the organizations that you choose once you hit a threshold of $5.00 or more.
 
