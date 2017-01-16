@@ -33,7 +33,7 @@ Technologies & API's used:
 ### 2. Choose a few of your favorite charities
 
 <p align="center">
-![](http://i.imgur.com/TozCDRi.gifv)
+![adding a charity](http://i.imgur.com/TozCDRi.gif)
 </p>
 
 ### 3. That's it!
