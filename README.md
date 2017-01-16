@@ -24,21 +24,15 @@ Technologies & API's used:
 
 ## Walkthrough:
 
-### 1.
-
-Link up your bank account in a secure and safe way!
+### 1. Link up your bank account in a secure and safe way!
 
 <img src="http://i.imgur.com/N3gc9dZ.png" align="center" width="300px">
 
-### 2.
-
-Choose a few of your favorite charities
+### 2. Choose a few of your favorite charities
 
 <img src="http://i.imgur.com/TozCDRi.gifv" align="center" width="300px">
 
-### 3.
-
-That's it!
+### 3. That's it!
 
 This is an app designed to safely and securely round up all of your approved transactions to the nearest dollar, and give what's left over to awesome charities and non-profits that you choose. It will automatically push your round ups to the organizations that you choose once you hit a threshold of $5.00 or more.
 
