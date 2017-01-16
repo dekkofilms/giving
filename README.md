@@ -30,6 +30,27 @@ Technologies & API's used:
 
 Link up your bank account in a secure and safe way!
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ### 2.
 
 Choose a few of your favorite charities
