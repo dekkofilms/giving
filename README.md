@@ -26,11 +26,15 @@ Technologies & API's used:
 
 ### 1. Link up your bank account in a secure and safe way!
 
-<img src="http://i.imgur.com/N3gc9dZ.png" align="center" width="300px">
+<p align="center">
+<img src="http://i.imgur.com/N3gc9dZ.png" width="300px">
+</p>
 
 ### 2. Choose a few of your favorite charities
 
-<img src="http://i.imgur.com/TozCDRi.gifv" align="center" width="300px">
+<p align="center">
+<img src="http://i.imgur.com/TozCDRi.gifv" width="300px">
+</p>
 
 ### 3. That's it!
 
