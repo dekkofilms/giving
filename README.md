@@ -28,10 +28,10 @@ Technologies & API's used:
 
 Link up your bank account in a secure and safe way!
 
-<img src="http://i.imgur.com/bSHR8sj.png" style="float: right">
+<img src="http://i.imgur.com/N3gc9dZ.png" style="float: right">
 
 
-# ![Imgur](http://i.imgur.com/smXhS7E.png)
+<!-- # ![Imgur](http://i.imgur.com/smXhS7E.png) -->
 
 ## About
 
