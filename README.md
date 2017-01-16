@@ -26,9 +26,9 @@ Technologies & API's used:
 
 #### 1
 
-<p style="float: left">Link up your bank account in a secure and safe way!</p>
+Link up your bank account in a secure and safe way!
 
-<img src="http://i.imgur.com/N3gc9dZ.png" style="float: right" width="100px">
+<img src="http://i.imgur.com/N3gc9dZ.png" align="right" width="100px">
 
 
 <!-- # ![Imgur](http://i.imgur.com/smXhS7E.png) -->
