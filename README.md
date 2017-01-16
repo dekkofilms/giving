@@ -1,10 +1,24 @@
 ## Giving
 
-#### Thanks for Giving!
+#### Coming to the App Store soon!
 
 <p align="center">
   <img src="http://i.imgur.com/bSHR8sj.png" max-width="100%">
 </p>
+
+#### This is an iOS app built in Swift by Taylor King.
+
+This app was built to not only make giving easy, but more of a routine that is consistent in our lives. There are many awesome organizations and charities that would hopefully benefit from such an app.
+
+Technologies & API's used:
+
+* Node.js
+* Postgres
+* Swift
+* Heroku
+* Alamofire
+* Plaid
+* Stripe
 
 ___
 
