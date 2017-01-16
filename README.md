@@ -26,7 +26,7 @@ Technologies & API's used:
 
 * Linking a user's bank account was a minor hurdle just because the API I worked with didn't actually have native swift integration for the app, so the work around was using a WKWebview in Xcode that loads up a page within my app, and then it works as functions.
 
-* Rounding up NEW transactions was a fun and interesting challenge. I interacted with Webhooks that Plaid provides. They check 4-6 times a day for new activity in users banks', and I was specifically interested in their Webhook code 2. When that gets fired off, the coding magic happens. 
+* Rounding up NEW transactions was a fun and interesting challenge. I interacted with Webhooks that Plaid provides. They check 4-6 times a day for new activity in users banks', and I was specifically interested in their Webhook code 2. When that gets fired off, the coding magic happens.
 
 ## Walkthrough:
 
@@ -53,6 +53,6 @@ This is an app designed to safely and securely round up all of your approved tra
 
 ## Backend
 
-My backed link is <a href="https://github.com/dekkofilms/backend/tree/master">here</a>.
+My backend link is <a href="https://github.com/dekkofilms/backend/tree/master">here</a>.
 
 ## Thanks! Let's start giving!
