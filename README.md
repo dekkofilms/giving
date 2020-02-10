@@ -51,8 +51,4 @@ This is an app designed to safely and securely round up all of your approved tra
 <img src="http://i.imgur.com/OqBpdVd.png" width="300px">
 </p>
 
-## Backend
-
-My backend link is <a href="https://github.com/dekkofilms/backend/tree/master">here</a>.
-
 ## Thanks! Let's start giving!
